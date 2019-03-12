@@ -1,6 +1,1 @@
-# Windows .Renviron file:
 R_LIBS_USER="C:/R/library"
-R_USER="C:/R"
-R_DOC_DIR="C:/R"
-HOME="C:"
-GITHUB_PAT='178ea6267faabf52efd2612b603b13438cdeaed4'
