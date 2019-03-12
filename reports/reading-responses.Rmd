@@ -1,15 +1,11 @@
 ---
 title: "reading-responses"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
----
-output: github_document
----
 
 ## week 2 reading prompts  
 

@@ -1,6 +1,11 @@
 
 ## correspondence
 
+### 2019-03-12
+
+**RL** Please use the `github_document` output for your R markdown
+documents
+
 ### 2019-03-10
 
 **RL** You had not yet created the .Renviron file, so I did it for you.

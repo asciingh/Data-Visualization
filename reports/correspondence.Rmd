@@ -4,6 +4,9 @@ output: github_document
 
 ## correspondence 
 
+### 2019-03-12 
+
+**RL** Please use the `github_document` output for your R markdown documents
 
 
 ### 2019-03-10
