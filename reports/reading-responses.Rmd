@@ -6,12 +6,13 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
+##week 10 reading prompt
+##week 8 reading prompt
+##week 6 reading prompt
+##week 4 reading prompt
 ## week 2 reading prompts  
 
-Tufte, Edward (1997) The decision to launch the space shuttle Challenger. 
-In: *Visual and statistical thinking: Displays of evidence for making
-decisions.* Cheshire, CT: Graphics Press, 16--31.
+
 
 **Prompt:** Tufte says, "Regardless of the indirect cultural causes of the
 accident, there was a clear proximate cause." Summarize Tufte's explanation 
@@ -59,3 +60,5 @@ The purpose of this paper is to look give a statistical explanation to what went
 - inspecting alternate explanations.
 
 If we try to adhere to this we can explore the data well enough to not mislead ourselves and the audience.
+
+[Reading response 1](reports/reading-response-1-Tufte-1997.md) Edward Tufte (1997) The decision to launch the space shuttle Challenger.    
