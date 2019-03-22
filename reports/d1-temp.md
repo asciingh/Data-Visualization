@@ -27,12 +27,15 @@ m\ddot{x} + c \dot{x} + kx = F
 
  \#test
 
-Visualization is a great place to start with R programming, because the payoff is so clear: you get to make elegant and informative plots that help you understand data (Wickham and Grolemund 2017).
+Visualization is a great place to start with R programming, because the payoff is so clear: you get to make elegant and informative plots that help you understand data (Wickham and Grolemund [2017](#ref-Wickham+Grolemund:2017)).
 
 newTest
 =======
 
-the graph to know what is missing. He puts forward the following principles: - documenting -enforcing appropriate comparisons -demonstrating cause and effect -expressing quantitatively - realizing multivariate nature of analytical problems - inspecting alternate explanations. (Tufte 1997)
+the graph to know what is missing. He puts forward the following principles: - documenting -enforcing appropriate comparisons -demonstrating cause and effect -expressing quantitatively - realizing multivariate nature of analytical problems - inspecting alternate explanations. (Tufte [1997](#ref-Tufte:1997))
+
+References
+----------
 
 Tufte, Edward. 1997. “Decision to launch Challenger.” In *Visual and statistical thinking: Displays of evidence for making decisions*. Cheshire, CT, 16–31: Graphics Press. [https://www.edwardtufte.com/tufte/books\_textb]( https://www.edwardtufte.com/tufte/books_textb).
 
