@@ -1,0 +1,48 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library("tidyverse")
+library("graphclassmate")
+```
+
+```{r}
+ski2 =skidf
+ski2
+```
+
+```{r}
+p <- ggplot(ski2, aes(y = speed, x = gender_event)) +
+        geom_boxplot() +
+        coord_flip()
+p
+```
+
+```{r}
+p <- p + 
+        labs(y = "Years enrolled", x = "", title = "Speeds for various events") +
+        theme_graphclass()
+p
+```
+
+```{r}
+p <- p + 
+        aes(fill = event) +
+        scale_fill_manual(values = c(rcb("light_BG"), rcb("light_Br"), rcb("dark_Br")))
+p
+```
+```{r}
+p <- p + 
+        guides(fill  = guide_legend(title = NULL), color = "none")
+p
+```
+```{r}
+ggsave(filename = "boxplot-ski.png",
+        path    = "../figures",
+        width   = 8,
+        height  = 2.5,
+        units   = "in",
+        dpi     = 300)
+```
+

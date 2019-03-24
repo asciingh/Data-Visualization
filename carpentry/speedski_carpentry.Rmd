@@ -1,0 +1,24 @@
+---
+title: "bopx plot carpentry"
+output: html_notebook
+---
+
+```{r}
+library("tidyverse")
+library("graphclassmate")
+```
+
+```{r}
+data("speed_ski",package = "graphclassmate")
+```
+
+```{r}
+skidf <- skidf %>% 
+        mutate(gender_event = str_c(sex,event,sep=" "))%>%
+        mutate(gender_event = fct_reorder(gender_event,speed))
+```
+
+```{r}
+saveRDS(skidf,"speed_ski.rds")
+```
+
