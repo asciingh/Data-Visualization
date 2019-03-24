@@ -1,0 +1,62 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library("tidyverse")
+library("graphclassmate")
+```
+
+```{r}
+ airqual2 <- readRDS("../data/airqual_clean.rds") %>% 
+        glimpse()
+```
+
+```{r}
+airqual2 %>% 
+        select(Ozone,Wind,Temp) %>% 
+        summary()
+```
+
+
+```{r}
+windOzone <- ggplot(airqual2, aes(x = Wind, y = Ozone,color=Month)) +
+        geom_point() +
+        geom_jitter(width = 0, height = 0.1) +
+        theme_graphclass()+
+        labs(x= "Ozone (DU)",y="Wind (mph)")
+windOzone
+```
+
+
+```{r}
+ggsave(filename = "0302-strip-plot-airqual2.png",
+        path    = "../figures",
+        device  = "png",
+        width   = 8,
+        height  = 2.5,
+        units   = "in",
+        dpi     = 300)
+```
+
+
+#DU - dobson unit
+```{r}
+TempOzone <- ggplot(airqual2, aes(x = Temp, y = Ozone,color=Month)) +
+        geom_point() +
+        geom_jitter(width = 0, height = 0.1) +
+        theme_graphclass()+
+        labs(x= "Temperature(F)",y="Ozone (DU")
+TempOzone
+```
+```{r}
+ggsave(filename = "0302-strip-plot-airqual1.png",
+        path    = "../figures",
+        device  = "png",
+        width   = 8,
+        height  = 2.5,
+        units   = "in",
+        dpi     = 300)
+```
+

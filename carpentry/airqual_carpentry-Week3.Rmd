@@ -1,0 +1,35 @@
+---
+title: "Air Quality- cleaning Data"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+airqual2 <- read.csv(file="../data-raw/airqual_raw.csv",header=TRUE,sep=",")
+airqual2
+```
+
+```{r}
+airqual2 <- airqual2 %>% 
+        select(Month, Ozone, Temp, Wind) %>% 
+        as_tibble() %>% glimpse()
+
+```
+
+
+```{r}
+airqual2 <- airqual2 %>%
+        mutate(Month = as_factor(Month)) %>% 
+        mutate(Month = fct_reorder(Month, Ozone)) %>%
+        glimpse()
+
+```
+
+```{r}
+saveRDS(airqual2, "../data/airqual_clean.rds")
+
+```
+

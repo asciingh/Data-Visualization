@@ -1,0 +1,41 @@
+---
+title: "exercises week 3-strip plot"
+author: "Anirudh Singh"
+date: "March 24, 2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+
+```
+
+```{r}
+install.packages("installr")
+library("installr")
+updateR()
+
+```
+
+##Doing parts of the tutorials to keep 
+```{r}
+install.packages("GDAdata")
+library("tidyverse")
+library("graphclassmate")
+library("GDAdata")
+```
+
+```{r}
+explore <- SpeedSki %>% 
+        glimpse()
+
+```
+
+```{r}
+? graphclassmate::museum_exhibits
+```
+
