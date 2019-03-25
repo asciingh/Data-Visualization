@@ -1,6 +1,36 @@
 
 ## correspondence
 
+### 2019-03-25
+
+**RL** You should have a README.Rmd that has been edited per the
+detailed instructions in last week’s portfolio lab. Please try to make
+up the work as soon as possible. As the weeks go by it gets harder and
+harder to make up lost time.
+
+If your install of graphclassmate does not include the data in the
+package, it probably has to do with Rtools and the current R version.
+I’ll post a tip on this asap.
+
+I don’t see any data except exercise data sets. I would have hoped that
+by now you would have been examining some data for graphing, even if a
+graph wasn’t ready. I can’t emphasize enough how important it is that
+you work ahead on acquiring data that meets the data requirements for
+the various displays. This is the single biggest obstacle that has kept
+past students from being as successful as they might have been.
+
+You have a RDS data file in your top level directory. Please move it to
+the correct directory. This was caused by not using a relative file path
+in your `speedski_carpentry.Rmd`. You wrote this in a code chunk,
+
+    saveRDS(skidf,"speed_ski.rds")
+
+that should have been this
+
+    saveRDS(skidf,"data/speed_ski.rds")
+
+**AS response**
+
 ### 2019-03-12
 
 **RL** Please use the `github_document` output for your R markdown
@@ -19,16 +49,9 @@ your reading response file as described
 Remember to complete your responses in writing before class on Tuesday.
 <https://github.com/DSR-RHIT/me447-visualizing-data/blob/master/reports/reading-prompts-1.Rmd>
 
-**RL** This is an example of a second comment in reverse chronological
-order.
-
-**RD** And its response.
-
 ### 2019-02-10
 
 **RL** I will use this Rmd file for corresponding with you about your
 portfolio. Entries will be dated and listed in reverse chronological
 order–that is, with the most recent at the top of the page. You should
 record your responses directly below, for example:
-
-**RD** This is a sample response to the comment above.
