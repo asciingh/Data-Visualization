@@ -13,6 +13,11 @@ All the tutorials and exercises are online. Work thru them all as soon
 as you can to make sure you haven’t missed any small details of coding
 or rhetoric.
 
+There has been about a week now without any progress. This could be a
+problem for you if you cannot manage to make up the missed work,
+especially the time that would have been devoted to acquiring relevant
+data to work with.
+
 ### 2019-03-25
 
 **RL** You should have a README.Rmd that has been edited per the
