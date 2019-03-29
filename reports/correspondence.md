@@ -1,6 +1,18 @@
 
 ## correspondence
 
+### 2019-03-29
+
+**RL** D1 presentation notes
+
+Excused absence so you’ll have to make up the work. Make sure you
+complete the presentation prompts in the assigned Rmd document, save,
+commit, pull, and push to GitHub.
+
+All the tutorials and exercises are online. Work thru them all as soon
+as you can to make sure you haven’t missed any small details of coding
+or rhetoric.
+
 ### 2019-03-25
 
 **RL** You should have a README.Rmd that has been edited per the
