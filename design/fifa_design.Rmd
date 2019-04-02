@@ -1,0 +1,36 @@
+---
+title: "fifa_design"
+author: "Anirudh Singh"
+date: "April 1, 2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+myData <- readRDS("../data/fifa_ready.rds") %>% 
+        glimpse()
+```
+
+```{r}
+p <- ggplot(youngPotential, aes(y = Potential, x = Nationality )) +
+        geom_boxplot()+
+        coord_flip() + 
+        theme_graphclass()+
+        labs(x= "Nationality",y="Potential (80+)", title = "Best future players by Country")+ 
+         theme_graphclass()
+p
+```
+```{r}
+ggsave(filename = "fifa-port1",
+        path    = "../figures",
+        device  = "png",
+        width   = 8,
+        height  = 2.5,
+        units   = "in",
+        dpi     = 300)
+```
+

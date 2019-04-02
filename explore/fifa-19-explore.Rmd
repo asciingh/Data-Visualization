@@ -1,0 +1,89 @@
+---
+title: "fifa19_explore"
+output: html_notebook
+---
+
+```{r}
+library("tidyverse")
+library("graphclassmate")
+```
+
+
+
+```{r}
+fifaData <- read.csv(file = "../data/fifa-19-data.csv")
+
+```
+
+```{r}
+fifaData %>%
+        glimpse()
+```
+```{r}
+fifaData %>% count(Preferred.Foot)
+```
+```{r}
+mean(fifaData$Overall)
+```
+
+
+```{r}
+hundredNation <- fifaData %>% group_by(Nationality) %>% filter(n() > 200)
+
+```
+```{r}
+hundredNation 
+
+        
+```
+
+```{r}
+ggplot(hundredNation, aes(y = hundredNation$Overall, x = hundredNation$Nationality )) +
+        geom_boxplot()+
+        coord_flip()
+
+```
+```{r}
+ggplot(hundredNation, aes(y = hundredNation$Potential, x = hundredNation$Work.Rate )) +
+        geom_boxplot()+
+        coord_flip()
+```
+```{r}
+ggplot(hundredNation, aes(y = hundredNation$Potential, x = hundredNation$Position )) +
+        geom_boxplot()+
+        coord_flip()
+```
+```{r}
+youngPotential <- filter(fifaData, Potential > 80)
+youngPotential <- filter(youngPotential, Age < 25)
+dim(youngPotential)
+```
+
+```{r}
+ggplot(youngPotential, aes(y = Potential, x = Nationality )) +
+        geom_boxplot()+
+        coord_flip()
+```
+```{r}
+youngPotential <- youngPotential %>% group_by(Nationality) %>% filter(n()>22)
+dim(youngPotential)
+```
+#for carpentry
+
+#filter out ones with nation and potential as NA
+#filter out ones above 30 age
+#filter out ones above 80 potential
+
+```{r}
+#need dat file
+fifa_carpentry = fifaData %>% select(ID,Name,Age,Potential,Overall,Nationality,Position,Work.Rate)
+```
+
+```{r}
+dim(fifa_carpentry)
+```
+
+```{r}
+colnames(fifa_carpentry)[colSums(is.na(fifa_carpentry))>0]
+```
+
