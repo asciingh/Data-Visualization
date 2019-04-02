@@ -1,6 +1,8 @@
 ---
 title: "bopx plot carpentry"
 output: html_notebook
+editor_options: 
+  chunk_output_type: inline
 ---
 
 ```{r}
@@ -19,6 +21,10 @@ skidf <- skidf %>%
 ```
 
 ```{r}
-saveRDS(skidf,"speed_ski.rds")
+# the path is relative to the project main directory
+# so this 
+saveRDS(skidf,"data/speed_ski.rds")
+# not this (RAL)
+# saveRDS(skidf,"speed_ski.rds")
 ```
 
