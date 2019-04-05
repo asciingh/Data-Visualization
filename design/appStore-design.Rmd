@@ -1,0 +1,29 @@
+
+```{r}
+library("tidyverse")
+library("graphclassmate")
+```
+
+```{r}
+appData <- readRDS("../data/appStore-multiway.rds") %>%  
+    glimpse()
+```
+```{r}
+p <- ggplot(appData, aes(x = price, y = user_rating,color = cont_rating)) +
+    geom_point() +
+        geom_jitter(width = 0.025, height = 0.05)+
+        facet_wrap(vars(prime_genre), as.table = FALSE) + 
+         theme_graphclass() +
+        labs(y = "User Ratings", x = "Price of App (US $)")
+p
+```
+
+```{r}
+ggsave(filename = "0402-multiway-appStore.png",
+        path    = "../figures/",
+        width   = 15,
+        height  = 15,
+        units   = "in",
+        dpi     = 400)
+```
+
