@@ -1,0 +1,102 @@
+---
+title: "Multiway Plot Explore"
+output: github_notebook
+---
+```{r}
+library("tidyverse")
+library("graphclassmate")
+```
+
+```{r}
+appStore <- read.csv(file="../data-raw/AppleStore.csv")
+```
+
+```{r}
+appStore %>% select(price) %>%
+        summary()
+```
+
+```{r}
+appStore %>% select(rating_count_ver) %>%
+        summary()
+```
+```{r}
+appStore %>% select(rating_count_tot,price,size_bytes,sup_devices.num,lang.num) %>%
+        summary()
+```
+```{r}
+appStore %>% select(user_rating) %>%
+        unique() %>%
+        arrange(user_rating)
+```
+
+```{r}
+appStore %>% select(prime_genre) %>%
+        unique() %>%
+        arrange(prime_genre)
+```
+```{r}
+appStore %>% select(cont_rating) %>%
+        unique() %>%
+        arrange(cont_rating)
+```
+```{r}
+appStore %>% select(price) %>%
+        unique() %>%
+        arrange(price)
+```
+
+```{r}
+ggplot(appStore,aes(x=rating_count_tot, y = user_rating)) +
+        geom_point() +
+         scale_x_continuous(trans = 'log2')
+        
+```
+
+```{r}
+ggplot(appStore,aes(x=price, y = user_rating)) +
+        geom_point() 
+        
+```
+
+#User rating, price and genre
+
+
+```{r}
+ ggplot(appStore, aes(x = price, y = user_rating)) +
+    geom_point() +
+    facet_wrap(vars(prime_genre), as.table = FALSE)
+```
+# total ratings, cont_rating, genre
+```{r}
+ ggplot(appStore, aes(x = rating_count_tot, y = cont_rating)) +
+    geom_point() +
+    facet_wrap(vars(prime_genre), as.table = FALSE)
+        
+```
+```{r}
+appless<- appStore %>% filter(price<42) 
+```
+```{r}
+appless
+```
+```{r}
+ ggplot(appless, aes(x = price, y = user_rating)) +
+    geom_point() +
+        geom_jitter(alpha=0.02)+
+    facet_wrap(vars(prime_genre), as.table = FALSE)
+```
+
+```{r}
+dim(appless)
+```
+
+```{r}
+dim(appStore)
+```
+
+```{r}
+
+```
+
+

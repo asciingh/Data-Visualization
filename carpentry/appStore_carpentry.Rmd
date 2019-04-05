@@ -1,0 +1,34 @@
+---
+title: "data_carpentry_appstore"
+output: html_notebook
+---
+
+```{r}
+appData <- appless %>% select(X, id, track_name,user_rating,prime_genre,price)
+```
+
+
+```{r}
+appData <- appless %>%
+        mutate(user_rating = factor(user_rating)) %>%
+       
+        mutate(prime_genre = fct_reorder(prime_genre,price))
+```
+
+```{r}
+ ggplot(appData, aes(x = price, y = user_rating)) +
+    geom_point() +
+        geom_jitter(width = 0.025, height = 0.05)+
+    facet_wrap(vars(prime_genre), as.table = FALSE)
+```
+
+```{r}
+saveRDS(appData, "../data/appStore-multiway.rds")
+```
+
+
+
+```{r}
+
+```
+

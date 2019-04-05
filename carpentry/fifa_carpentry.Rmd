@@ -1,0 +1,32 @@
+---
+title: "Fifa_data_carpentry"
+output: github_notebook
+---
+```{r}
+library("tidyverse")
+library("graphclassmate")
+```
+
+```{r}
+fifa_carpentry <- fifaData %>% select(ID,Name,Age,Potential,Overall,Nationality,Position,Work.Rate)
+```
+
+```{r}
+fifa_carpentry %>% summary()
+```
+
+```{r}
+fifa_carpentry <- filter(fifa_carpentry, Potential > 80)
+fifa_carpentry <- filter(fifa_carpentry, Age < 25)
+dim(fifa_carpentry)
+```
+
+```{r}
+fifa_carpentry <- na.omit(fifa_carpentry)
+dim(fifa_carpentry)
+```
+
+```{r}
+saveRDS(fifa_carpentry, "../data/fifa_ready.rds")
+```
+
