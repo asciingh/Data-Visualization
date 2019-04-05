@@ -1,6 +1,19 @@
 
 ## correspondence
 
+### 2019-04-05
+
+**RL** D2 presentation notes.
+
+If most apps are in the 0-10 dollar range, it should be graphed to show
+that
+
+Make sure the conclusion you draw is explicitly shown by the graph,
+i.e., the logic of the graph supports the logic of your display.
+
+As we discussed, these data do not meet the strict definition of
+multiway data, but you may be able to use these data in a scatterplot.
+
 ### 2019-03-29
 
 **RL** D1 presentation notes
@@ -9,9 +22,9 @@ Excused absence so you’ll have to make up the work. Make sure you
 complete the presentation prompts in the assigned Rmd document, save,
 commit, pull, and push to GitHub.
 
-All the tutorials and exercises are online. Work thru them all as soon
-as you can to make sure you haven’t missed any small details of coding
-or rhetoric.
+All the tutorials and exercises are online. Work through them all as
+soon as you can to make sure you haven’t missed any small details of
+coding or rhetoric.
 
 There has been about a week now without any progress. This could be a
 problem for you if you cannot manage to make up the missed work,
