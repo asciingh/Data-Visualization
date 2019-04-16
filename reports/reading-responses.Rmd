@@ -9,6 +9,45 @@ knitr::opts_chunk$set(echo = TRUE)
 ##week 10 reading prompt
 ##week 8 reading prompt
 ##week 6 reading prompt
+Dragga, Sam & Dan Voss (2001) Cruel pies: The inhumanity of technical
+illustrations. *Technical Communication* 48(3): 265--274.
+
+**Prompt:** Explain how the prevalent treatment of ethics in visual communication is lacking.
+
+**Response:** 
+So far wherever the issus of misguidance has been brought up, it has been related to accuracy and validity. Most of the books that cover ethics in visualization usually only talk about graph distortion and honesty instead of deception. This ends up being not enough.
+
+
+**Prompt:** Explain the purpose of "humanizing" data displays depicting human suffering or death. 
+
+**Response:**  
+By omitting the human misery caused by that militarycampaign,  the  illustration  could  be  said  to  constitute  adistortion  of  the  reality  that  escapes  the  statistics.  Thegraphic isn’t so much deceptive, however, as it is plainlyinhumane—insensitive or indifferent to the human condi-tion it depicts. It is a graphic that exhibits the “ethic ofexpediency” (Katz 1992).
+
+By humanizing the data we are making sure that we are not omitting the human misery. If we do then the figure is distorted of its reality. When we do not see the people we do not see the suffering so it is difficult to understand the gravity of the situation.
+
+
+**Prompt:**  Consider the authors' attempts at redesigning such data displays. Did one in particular strike you as ineffective? Explain    
+
+**Response:** 
+
+I feel the cold statistics did not do the best job at humanizing. Here I feel it was not important to add a picture since cold is not severe enough for us to humanize it. The cold picture is also misleading since it is not clear what the person in bed is doing and if it requires explaining, not worth it.
+
+
+**Prompt:**  Did one in particular strike you as effective? Explain. 
+The babies graph was effective since just a plain histograph would not justify how terrible babies falling down stairs is.
+
+
+**Response:** 
+
+
+
+
+
+
+
+
+
+
 ##week 4 reading prompt
 ## week 2 reading prompts  
 

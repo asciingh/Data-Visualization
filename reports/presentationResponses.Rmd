@@ -28,7 +28,7 @@ to
 
 ## D1 distributions 
 
-State the number of observations:  
+State the number of observations: 7197 
 
 List the variables: 
 
@@ -77,18 +77,26 @@ List the variables:
         - It has 10 levels
 - primary_genre (Travel...) - This is the type of application on the app store based on the function it serves.
         - It has 23 unique genres
+        
 
 State the graph type:  Multiway Plot
 
 Explain why the graph type is suited to the data structure:  
 
+- Want to look at popular application and their prices and how they vary in different genres.
+
 - Since we are trying to show how price varies in several categories of application based and we also want to show how user ratings affect the price. This is the ideal plot.
 
 Explain each design choice and cite its supporting reference 
 
-- choice, reference 
-- choice, reference 
-- etc 
+- Using only apps with price less than $42
+        - getting rid of outliers - better scaling.
+        - applications costing are unpopular.
+        
+- using cont_rating as colour 
+        - helps establish relationship between cont rating and price. (if any)
+- user_rating - (serves as a test to see if pricing it at that level was successful)
+ 
 
 Comments from peers 
 
