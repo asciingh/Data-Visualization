@@ -96,7 +96,20 @@ dim(appStore)
 ```
 
 ```{r}
-
+ggplot(appData, aes(x = price, y = prime_genre,color = cont_rating)) +
+    geom_point() +
+        geom_jitter(width = 0.025, height = 0.05)+
+        facet_wrap(vars(user_rating), as.table = FALSE) + 
+         theme_graphclass() +
+        labs(y = "User Ratings", x = "Price of App (US $)")
+```
+```{r}
+ggsave(filename = "0402-multiway-appStore-flip.png",
+        path    = "../figures/",
+        width   = 20,
+        height  = 20,
+        units   = "in",
+        dpi     = 400)
 ```
 
 

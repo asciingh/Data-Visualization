@@ -21,8 +21,8 @@ p
 ```{r}
 ggsave(filename = "0402-multiway-appStore.png",
         path    = "../figures/",
-        width   = 15,
-        height  = 15,
+        width   = 20,
+        height  = 20,
         units   = "in",
         dpi     = 400)
 ```
