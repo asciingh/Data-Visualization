@@ -4,6 +4,11 @@ output: github_document
 
 ## correspondence 
 
+
+
+
+
+
 ### 2019-04-19
 
 **RL**  D3 presentation notes. 
@@ -17,6 +22,8 @@ You might try graphing aggression as a function of composure instead of the play
 Add a label for a few players with their names. 
 
 Try shape = position, color = rating 
+
+This data set is a candidate for D6 multivariate quantitative data 
 
 
 

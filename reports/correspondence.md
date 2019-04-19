@@ -17,6 +17,8 @@ Add a label for a few players with their names.
 
 Try shape = position, color = rating
 
+This data set is a candidate for D6 multivariate quantitative data
+
 ### 2019-04-05
 
 **RL** D2 presentation notes.
