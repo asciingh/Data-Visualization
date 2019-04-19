@@ -1,6 +1,22 @@
 
 ## correspondence
 
+### 2019-04-19
+
+**RL** D3 presentation notes.
+
+Reorder the levels. Low/Low in the lower left corner, High/High in the
+upper right corner.
+
+Color by position makes sense.
+
+You might try graphing aggression as a function of composure instead of
+the player’s rating
+
+Add a label for a few players with their names.
+
+Try shape = position, color = rating
+
 ### 2019-04-05
 
 **RL** D2 presentation notes.
