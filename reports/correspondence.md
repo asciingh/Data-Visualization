@@ -1,6 +1,23 @@
 
 ## correspondence
 
+### 2019-04-26
+
+**RL** D4 presentation notes.
+
+I think a line graph is the way to show
+
+add vertical gray bands to delineate specific events or spans of years,
+Iraq war, etc. plus research to find what do other journalists think is
+the cause?
+
+the number as a percentage of what?
+
+potentially a compelling graphic.
+
+good idea to use the editorial image, though I would delete the Muslim
+image references first
+
 ### 2019-04-19
 
 **RL** D3 presentation notes.
