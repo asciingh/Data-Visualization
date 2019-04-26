@@ -1,0 +1,56 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+#fifa_interest <- filter(fifaData, Overall > 70)
+```
+
+```{r}
+p <- 
+  ggplot(data = fifa_interest, aes(x = Overall, y = Composure, col = Preferred.Foot)) +
+    geom_jitter(alpha = 0.2) +
+    facet_wrap(vars(Work.Rate), as.table = FALSE)+
+        theme_graphclass() +
+    labs(x = "Overall Rating", 
+             y = "Composure Rating",
+             title = "Effect of composure on overall rating", 
+              
+             caption = "Source: Kaggle"
+    ) +
+    scale_color_manual(values = c(rcb("mid_BG"), rcb("mid_Br")))
+p
+```
+```{r}
+ggsave(filename = "scatter-fifa-COMP.png",
+        path    = "../figures/",
+        width   = 8,
+        height  = 16,
+        units   = "in",
+        dpi     = 300)
+```
+
+```{r}
+q <- ggplot(data = fifa_interest, aes(x = Overall, y = Aggression, col = Preferred.Foot)) +
+    geom_jitter(alpha = 0.2) +
+    facet_wrap(vars(Work.Rate), as.table = FALSE)+
+        theme_graphclass() +
+    labs(x = "Overall Rating", 
+             y = "Aggression Rating",
+             title = "Effect of aggression on overall rating", 
+              
+             caption = "Source: Kaggle"
+    ) +
+    scale_color_manual(values = c(rcb("mid_BG"), rcb("mid_Br")))
+q
+```
+
+```{r}
+ggsave(filename = "scatter-fifa-aggression.png",
+        path    = "../figures/",
+        width   = 8,
+        height  = 16,
+        units   = "in",
+        dpi     = 300)
+```

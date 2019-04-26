@@ -1,0 +1,39 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library("tidyverse")
+library("gapminder")
+```
+
+```{r}
+prep <- gapminder
+str(prep)
+```
+
+```{r}
+prep <- prep %>%
+        as_tibble() %>%
+        glimpse()
+```
+
+```{r}
+prep_fact <- prep %>%
+        select_if(is.factor) %>%
+        glimpse()
+```
+```{r}
+sapply(prep_fact,nlevels)
+```
+
+
+```{r}
+prep_num <- prep %>%
+        select_if(is.numeric) %>%
+        glimpse()
+```
+```{r}
+
+```
+

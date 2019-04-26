@@ -34,7 +34,7 @@ I feel the cold statistics did not do the best job at humanizing. Here I feel it
 
 
 **Prompt:**  Did one in particular strike you as effective? Explain. 
-The babies graph was effective since just a plain histograph would not justify how terrible babies falling down stairs is.
+The babies graph was effective since just a plain histograph is insensitive towards falling babies and does not show the gravity of the situation.
 
 
 **Response:** 

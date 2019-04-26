@@ -1,0 +1,40 @@
+---
+title: "R Notebook"
+output: github_notebook
+---
+
+```{r}
+library("tidyverse")
+library("gapminder")
+```
+
+```{r}
+
+```
+
+```{r}
+prep <-subset(prep, select = c("country","year", "lifeExp", "pop", "gdpPercap") )
+```
+
+```{r}
+prep <- prep %>%
+        as_tibble() %>%
+        glimpse()
+```
+```{r}
+countryVector <- c("Norway","Switzerland","Sweden","Japan","Italy","Greece","Canada","Spain","Singapore","Germany","United States", "Australia","India","China", "Korea, Rep.", "Mexico")
+
+```
+
+
+```{r}
+prep_final <- prep %>% 
+        select(country) %>% 
+        filter(countryVector)
+        
+```
+
+```{r}
+p
+```
+

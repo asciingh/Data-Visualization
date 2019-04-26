@@ -1,0 +1,125 @@
+---
+title: "R Notebook"
+output: github_notebook
+---
+```{r}
+library(tidyverse)
+library(graphclassmate)
+```
+
+```{r}
+fifaData <- read.csv(file = "../data/fifa-19-data.csv")
+```
+
+
+```{r}
+fifaData <- fifaData %>%
+        as_tibble() %>%
+        glimpse()
+
+```
+```{r}
+fifa_interest <- fifaData %>% select(ID,Name,Age,Potential,Overall,Nationality,Wage,Value,Position,Work.Rate,Preferred.Foot,Vision,Composure,Aggression)
+```
+
+```{r}
+fifa_interest <- fifa_interest %>%
+        as_tibble() %>%
+        glimpse()
+```
+```{r}
+fifa_interest <- fifa_interest %>%
+  mutate(WageMultiplier = ifelse(str_detect(Wage, "K"), 1000, ifelse(str_detect(Wage, "M"), 1000000, 1))) %>%
+  mutate(WageNumeric_pounds = as.numeric(str_extract(Wage, "[[:digit:]]+\\.*[[:digit:]]*")) * WageMultiplier)
+
+```
+
+
+```{r}
+
+fifa_interest <- fifa_interest %>%
+  mutate(ValueMultiplier = ifelse(str_detect(Value, "K"), 1000, ifelse(str_detect(Value, "M"), 1000000, 1))) %>%
+  mutate(ValueNumeric_pounds = as.numeric(str_extract(Value, "[[:digit:]]+\\.*[[:digit:]]*")) * ValueMultiplier) %>%
+  mutate(Position = ifelse(is.na(Position), "Unknown", Position))
+```
+
+
+```{r}
+positions <- unique(fifa_interest$Position)
+gk <- "GK"
+defs <- positions[str_detect(positions, "B$")]
+mids <- positions[str_detect(positions, "M$")]
+f1 <- positions[str_detect(positions, "F$")]
+f2 <- positions[str_detect(positions, "S$")]
+f3 <- positions[str_detect(positions, "T$")]
+f4 <- positions[str_detect(positions, "W$")]
+fwds <- c(f1, f2, f3, f4)
+gks <- positions[str_detect(positions, "GK")]
+```
+```{r}
+print(positions)
+```
+
+
+```{r}
+fifa_interest <- fifa_interest %>% 
+  mutate(PositionGroup = ifelse(Position %in% gk, "GK", ifelse(Position %in% defs, "DEF", ifelse(Position %in% mids, "MID", ifelse(Position %in% fwds, "FWD", "NO")))))
+```
+
+
+```{r}
+fifa_interest <- fifa_interest %>%
+        as_tibble() %>%
+        glimpse()
+```
+```{r}
+dim(fifa_interest)
+```
+```{r}
+fifa_interest <- na.omit(fifa_interest)
+#fifa_interest <- filter(fifaData, Overall > 70)
+```
+```{r}
+dim(fifa_interest)
+```
+
+```{r}
+ ggplot(data = fifa_interest, aes(x = Overall, y = Composure, col = Preferred.Foot)) +
+    geom_jitter(alpha = 0.2) +
+    facet_wrap(vars(Work.Rate), as.table = FALSE)+
+        theme_graphclass() +
+    labs(x = "Overall Rating", 
+             y = "Composure Rating",
+             title = "Effect of composure on overall rating", 
+             subtitle = "For players over 70 overall ", 
+             caption = "Source: VGAMdata package"
+    ) +
+    scale_color_manual(values = c(rcb("mid_BG"), rcb("mid_Br")))
+```
+```{r}
+ ggplot(data = fifa_interest, aes(x = Overall, y = Aggression, col = Preferred.Foot)) +
+    geom_jitter(alpha = 0.2) +
+    facet_wrap(vars(Work.Rate), as.table = FALSE)+
+        theme_graphclass() +
+    labs(x = "Overall Rating", 
+             y = "Aggression Rating",
+             title = "Effect of aggression on overall rating", 
+             subtitle = "For players over 70 overall ", 
+             caption = "Source: VGAMdata package"
+    ) +
+    scale_color_manual(values = c(rcb("mid_BG"), rcb("mid_Br")))
+```
+
+```{r}
+fifaData%>%
+        select(Work.Rate) %>% 
+        unique()
+```
+
+
+```{r}
+fifaData%>%
+        select(Preferred.Foot) %>% 
+        unique()
+```
+

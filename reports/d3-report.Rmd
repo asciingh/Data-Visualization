@@ -1,0 +1,48 @@
+---
+title: "R Notebook"
+output: github_notebook
+---
+
+
+State the number of observations: 18159 
+
+List the variables: 
+
+- Overall
+- Aggression
+- etc
+
+Category:
+  
+- Work Rate 
+- Preferred foot 
+ 
+
+State the graph type: 
+
+Explain why the graph type is suited to the data structure:  
+
+- We are trying to see the realtionship between 2 variables 
+- point 2 
+- etc 
+
+Explain each design choice and cite its supporting reference 
+
+- choice, reference 
+- choice, reference 
+- etc 
+
+Comments from peers 
+
+Reorder the levels
+Label couple players 
+Do composure vs Aggression  - label players
+Making  rating as colour 
+Shape for position
+
+Candidate for D6 Multivariate 
+
+
+
+
+

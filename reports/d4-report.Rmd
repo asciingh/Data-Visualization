@@ -1,0 +1,61 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+## D4 injuries or fatalities displayed ethically  
+
+**Context** 
+
+Type of injury or fatality: Death toll
+
+People affected: Journalists
+
+Over what span of time: 1992-2016
+
+
+
+**Graph the data conventionally**
+
+- If you are redesigning someone else's graph, include an image of the original 
+- If not, graph the data yourself using a graph type suited to the data  
+
+State the number of observations:  1782
+
+List the variables: 
+
+- death toll 
+- time
+- type of death (cat)
+
+State the graph type: bar graph
+
+Explain why the graph type is suited to the data structure: 
+
+- Since we are plotting number of deaths. A bar graph will be able to show clearly when comparing
+- bar graphs give us the capability of splitting the data based on subcategories.
+
+Explain the visual-rhetoric features of the graph that make it unethical:  
+
+- point 
+- point 
+- etc
+
+**Redesign the graph to display the data ethically**
+
+State the new graph type (if any): 
+
+Explain each design choice in the redesign and cite its supporting reference 
+
+- choice, reference 
+- choice, reference 
+- etc 
+
+Comments from peers 
+
+- Any suggestions on improving the ethical display of injuries or fatalities? 
+- Does the data structure satisfy the portfolio display requirements?  
+- From the Doumont paper, what type of story is being told? 
+- Is the graph type suited to the data structure? 
+- Other suggestion 
+- etc

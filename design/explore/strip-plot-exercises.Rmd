@@ -1,0 +1,101 @@
+---
+title: "Exercises-strip"
+author: "Anirudh Singh"
+date: "March 24, 2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Air quality
+```{r}
+library("tidyverse")
+library("graphclassmate")
+
+```
+
+
+```{r}
+explore <- airquality %>% 
+        glimpse()
+```
+
+#Explore: Create explore/0304-strip-plot-ozone-explore.R to examine the data. Explore the ozone readings using month as the categorical variable, identify the number, type, and levels of variables, create exploratory graphs to compare distributions.
+
+```{r}
+explore %>% 
+        select(Ozone,Solar.R,Wind,Temp) %>% 
+        summary()
+```
+#looks like all of them are ratio but only can tell with further p
+```{r}
+dim(explore)
+```
+
+
+```{r}
+explore %>% count(Month)
+```
+
+```{r}
+ explore %>% count(Month,Ozone)%>% 
+        arrange(desc(n))
+```
+```{r}
+#need to remove NA values
+
+airqual <- na.omit(explore)
+
+```
+
+```{r}
+dim(airqual)
+```
+
+```{r}
+ airqual %>% count(Month,Ozone)%>% 
+        arrange(desc(n))
+```
+
+```{r}
+ ggplot(airqual, aes(x = Month, y = Ozone)) +
+        geom_point() +
+        geom_jitter(width = 0, height = 0.1)      
+```
+
+#this is as good as a box plot but it tells us the lower ozone readings are in May and June. It starts to show a greater range of Ozone when July, August and Sept roll by.
+
+# Making month categorical.
+
+
+```{r}
+airqual$Month <- as.factor(airqual$Month)
+
+```
+#looking at relationships between Ozone and other readings
+```{r}
+ ggplot(airqual, aes(x = Solar.R, y = Ozone,color=Month)) +
+        geom_point() +
+        geom_jitter(width = 0, height = 0.1)  
+```
+# The relationship does not seem very strong. 300 radiation has similar Ozone readings as 50
+```{r}
+ggplot(airqual, aes(x = Wind, y = Ozone,color=Month)) +
+        geom_point() +
+        geom_jitter(width = 0, height = 0.1) 
+```
+# seems like mightier the wind lesser the Ozone
+```{r}
+ggplot(airqual, aes(x = Temp, y = Ozone,color=Month)) +
+        geom_point() +
+        geom_jitter(width = 0, height = 0.1) 
+```
+# seems like higher temperatures lead to higher Ozone readings
+```{r}
+write.csv(airqual, file="airqual_raw.csv")
+```
+```{r}
+
+```
