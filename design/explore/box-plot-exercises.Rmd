@@ -1,0 +1,61 @@
+---
+title: "Box Plot-explore"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(graphclassmate)
+
+```
+
+```{r}
+skidf <- speed_ski
+skidf %>%
+        glimpse()
+```
+
+```{r}
+skidf <- speed_ski %>% 
+        mutate(event = as_factor(event)) %>% 
+        mutate(sex = fct_reorder(sex, speed))
+```
+
+```{r}
+
+```
+
+```{r}
+ggplot(skidf, aes(x=event,y=speed))+
+        geom_boxplot()+
+        coord_flip()
+```
+
+```{r}
+ggplot(skidf, aes(x=sex,y=speed))+
+        geom_boxplot()+
+        coord_flip()
+```
+
+```{r}
+ggplot(skidf, aes(x=event,y=speed,fill=sex))+
+        geom_boxplot()
+```
+
+```{r}
+ggplot(skidf, aes(x=sex,y=speed,fill=event))+
+        geom_boxplot()
+```
+```{r}
+skidf <- skidf %>% 
+        mutate(gender_event = str_c(sex,event,sep=" "))%>%
+        mutate(gender_event = fct_reorder(gender_event,speed))
+
+
+```
+
+```{r}
+ggplot(skidf,aes(y=speed,x=gender_event))+
+        geom_boxplot()
+```
+
