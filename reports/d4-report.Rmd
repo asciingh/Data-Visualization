@@ -52,6 +52,21 @@ Explain each design choice in the redesign and cite its supporting reference
 - etc 
 
 Comments from peers 
+- Difference based on different wars
+- Line graph with lines for the different wars
+- Have a different panel for the total
+- find other investigative journalists who have studied this
+- watermark for the image
+- other editorial cartoons (edit the current one)
+- phillipines
+- death toll as a percentage of journalists in that area (try getting that)- get the denominator
+- looking at foreign journalists?
+- famous journalist sayings
+- unknown on top so blue starts from the same line
+- what goes into dangerous assignment
+- use coverage as category
+-use magik package for the image
+- graphdoctor.com
 
 - Any suggestions on improving the ethical display of injuries or fatalities? 
 - Does the data structure satisfy the portfolio display requirements?  

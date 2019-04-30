@@ -8,6 +8,50 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 ##week 10 reading prompt
 ##week 8 reading prompt
+
+Kostelnick, Charles (2007) The visual rhetoric of data displays: The conundrum
+of clarity. *IEEE Transactions on Professional Communication* 50(2): 280--294.
+
+**Prompt:** 
+Different facets of the graph  ? 
+**Response:** 
+Too little or too much on the graph. ethos logos pathos kairos. Need to include the pathos as well.
+Rhetoric of science:- 
+
+
+**Prompt:** 
+How does the author describe other communities?
+**Response:**
+Members of a community rarely care about different ideas from other communities. It is important to know if where they belong changes the way you look at things.
+
+
+**Prompt:**
+Rhetoric of participation?
+
+**Response:** 
+Making things interactive and giving the audience an option to see what they want. accept different readers find different things credible.
+
+**Prompt:**
+Rhetoric of adaptation?
+
+**Response:** 
+Change context and complexity of the graph based on technical knowledge of the audience. Expert vs layman
+
+
+**Prompt:**
+Rhetoric of science?
+
+**Response:** 
+Misconception: there is only 1 truth and people should see that.
+
+
+
+**Prompt:**
+Social Rhetoric?
+
+**Response:** 
+What is all the baggage the the audience brings with them. All of the preconceptions with the audience      
+
 ##week 6 reading prompt
 Dragga, Sam & Dan Voss (2001) Cruel pies: The inhumanity of technical
 illustrations. *Technical Communication* 48(3): 265--274.
