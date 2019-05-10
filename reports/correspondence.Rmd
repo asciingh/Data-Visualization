@@ -4,6 +4,17 @@ output: github_document
 
 ## correspondence 
 
+### 2019-05-10
+
+**RL**  D6 presentation notes. 
+
+
+
+
+
+
+
+
 
 ### 2019-04-26
 
