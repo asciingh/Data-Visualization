@@ -1,0 +1,90 @@
+---
+title: "R Notebook"
+output: github_notebook
+---
+
+```{r}
+library(tidyverse)
+library(graphclassmate)
+library("GGally")
+library("scagnostics")
+```
+
+```{r}
+fifaData <- read.csv(file = "../data/fifa-19-data.csv")
+```
+
+
+```{r}
+fifaData <- fifaData %>%
+        as_tibble() %>%
+        glimpse()
+
+```
+```{r}
+fifa_interest <- fifaData %>% select(ID,Name,Age,Potential,Overall,Nationality,Position,Acceleration,SprintSpeed, Agility, Balance, Reactions, Jumping, Stamina, Strength)
+```
+
+```{r}
+fifa_interest$Position <- ifelse(fifa_interest$Position=='ST', 'ATT', ifelse(fifa_interest$Position=='CF', 'ATT', fifa_interest$Position <- ifelse(fifa_interest$Position=='LF', 'ATT', ifelse(fifa_interest$Position=='RF', 'ATT', fifa_interest$Position <- ifelse(fifa_interest$Position=='LF', 'ATT', ifelse(fifa_interest$Position=='RF', 'ATT', fifa_interest$Position <- ifelse(fifa_interest$Position=='LS', 'ATT', ifelse(fifa_interest$Position=='RS', 'ATT', fifa_interest$Position <- ifelse(fifa_interest$Position=='LW', 'ATT', ifelse(fifa_interest$Position=='RW', 'ATT', fifa_interest$Position <- ifelse(fifa_interest$Position=='CAM', 'MID', ifelse(fifa_interest$Position=='CDM', 'MID', fifa_interest$Position <- ifelse(fifa_interest$Position=='LCM', 'MID', ifelse(fifa_interest$Position=='CM', 'MID', fifa_interest$Position <- ifelse(fifa_interest$Position=='LAM', 'MID', ifelse(fifa_interest$Position=='LDM', 'MID', fifa_interest$Position <- ifelse(fifa_interest$Position=='LM', 'MID', ifelse(fifa_interest$Position=='RAM', 'MID', fifa_interest$Position <- ifelse(fifa_interest$Position=='RCM', 'MID', ifelse(fifa_interest$Position=='RDM', 'MID', ifelse(fifa_interest$Position=='RM', 'MID', fifa_interest$Position <- ifelse(fifa_interest$Position=='CB', 'DEF', ifelse(fifa_interest$Position=='LB', 'DEF', fifa_interest$Position <- ifelse(fifa_interest$Position=='RB', 'DEF', ifelse(fifa_interest$Position=='RWB', 'DEF', fifa_interest$Position <- ifelse(fifa_interest$Position=='LCB', 'DEF', ifelse(fifa_interest$Position=='RCB', 'DEF', ifelse(fifa_interest$Position=='LWB', 'DEF', NA))))))))))))))))))))))))))))
+```
+
+
+```{r}
+
+```
+
+
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+```{r}
+fifa_interest <- fifa_interest %>%
+        as_tibble() %>%
+        glimpse()
+```
+
+```{r}
+ fifa_interest <- fifa_interest %>%
+        as_tibble() %>%
+        glimpse()
+```
+```{r}
+fifa_smaller <- subset(fifa_interest,Position !="MID")
+
+```
+```{r}
+fifa_smaller <- subset(fifa_smaller, Position != "NA")
+```
+
+```{r}
+
+ggparcoord(data = fifa_smaller, columns = 8:15, groupColumn  = "Position",
+           scale        = "globalminmax", 
+           # scaleSummary = "median", # use with  scale == “center”
+           # centerObsID  = 1,        # use with scale == “centerObs”
+           missing      = "exclude", 
+           order        = "Skewed", # scagnostic measures 
+           alphaLines   = 0.4, 
+           mapping      = NULL, 
+           title        = "Comparison of Physical attributes based on Position") +
+  labs(x = "Attributes", y = "Rating")
+```
+
+```{r}
+#ggsave(filename = "multivariate-fifa.png",
+ #       path    = "../figures/",
+  #      width   = 16,
+   #     height  = 8,
+    #    units   = "in",
+     #   dpi     = 300)
+```
+
+

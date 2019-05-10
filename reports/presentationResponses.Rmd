@@ -242,13 +242,16 @@ State the number of observations:
 
 Identify the variables:  
 
-- quantitative var 1 
-- quantitative var 2 
-- etc 
-- categorical var 1 and its levels 
-- categorical var 1 and its levels 
-- etc 
+Acceleration <int> 91, 89, 94, 57, 78, 94, 80, 86, 76, 43, 77, 64, 68, 70, 82, 87, 68, 88, 38, 46, 50, 75,...
+$ SprintSpeed  <int> 86, 91, 90, 58, 76, 88, 72, 75, 75, 60, 78, 62, 68, 64, 78, 83, 72, 85, 50, 52, 52, 76,...
+$ Agility      <int> 91, 87, 96, 60, 79, 95, 93, 82, 78, 67, 78, 70, 58, 92, 82, 91, 71, 90, 37, 61, 66, 77,...
+$ Balance      <int> 95, 70, 84, 43, 77, 94, 94, 83, 66, 49, 78, 71, 54, 90, 92, 85, 71, 80, 43, 45, 52, 59,...
+$ Reactions    <int> 95, 96, 94, 90, 91, 90, 90, 92, 85, 86, 90, 89, 85, 90, 93, 86, 91, 90, 85, 84, 87, 91,...
+$ Jumping      <int> 68, 95, 61, 67, 63, 56, 68, 69, 93, 76, 84, 30, 91, 64, 77, 75, 78, 90, 79, 68, 66, 88,...
+$ Stamina      <int> 72, 88, 81, 43, 90, 83, 89, 90, 84, 41, 78, 75, 66, 78, 96, 80, 89, 83, 35, 38, 86, 92,...
+$ Strength
 
+Category - position
 State the graph type: 
 
 Explain why the graph type is suited to the data structure: 
@@ -283,7 +286,7 @@ Comments from peers
 
 ## D6 multivariate 
 
-State the number of observations:  
+State the number of observations:  9284
 
 List the variables: 
 
@@ -315,6 +318,17 @@ Comments from peers
 - Is the graph type suited to the data structure? 
 - Other suggestion 
 - etc
+
+- as a defender....(part of critique) for each variable
+- number them on the scale
+- colors too dense for gridlines
+- annotation line 
+- try more ordering
+- use teams based on high and low performing teams, another dataframe with the team and players
+- add best players on each attribute
+- inlcude the other
+
+
 
 
 

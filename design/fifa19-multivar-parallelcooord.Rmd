@@ -1,0 +1,39 @@
+---
+title: "R Notebook"
+output: github_notebook
+---
+
+```{r}
+library(tidyverse)
+library(graphclassmate)
+library("GGally")
+library("scagnostics")
+```
+
+
+```{r}
+p <- ggparcoord(data = fifa_smaller, columns = 8:15, groupColumn  = "Position",
+           scale        = "globalminmax", 
+           missing      = "exclude", 
+           order        = "Outlying", # scagnostic measures 
+           alphaLines   = 0.4, 
+           mapping      = NULL, 
+           title        = "Comparison of Physical attributes based on Position") +
+  labs(x = "Attributes", y = "Rating")
+```
+
+```{r}
+p
+```
+
+
+```{r}
+ggsave(filename = "multivariate-19fifa.png",
+        path    = "../figures/",
+        width   = 16,
+        height  = 8,
+        units   = "in",
+        dpi     = 300)
+```
+```
+
