@@ -1,6 +1,23 @@
 
 ## correspondence
 
+### 2019-05-17
+
+**RL** D7 presentation notes.
+
+### 2019-05-10
+
+**RL** D6 presentation notes.
+
+Show a separate graph for midfield to support your assertion that they
+are all over the graph
+
+Apply an alpha to the colors for some transparency
+
+What can you say about each variable?
+
+Make sure the critique starts bt stating the overal stroy you see.
+
 ### 2019-04-26
 
 **RL** D4 presentation notes.
