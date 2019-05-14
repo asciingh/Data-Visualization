@@ -6,7 +6,47 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-##week 10 reading prompt
+
+## week 10 reading prompts  
+
+Spence, Ian (2006) William Playfair and the psychology of graphs. In: *IEEE
+Transactions on Professional Communication.* Alexandria, VA: American
+Statistical Association, section on statistical graphics, 2426--2436.
+
+<br>
+**Prompt:** Explain what the author means by the "psychology of graphs." 
+
+**Response:** 
+
+Graphs have the ability to exploit our natural perception and cognitive challenges. Playfair noticed this and wanted to adapt graphs to improve cognitive ability.
+
+<br>
+**Prompt:**  Psychology was identified as its own science in the 1730s and 
+experimental psychology research began in the 1830s. Thus William Playfair's 
+life (1759--1823) overlapped the beginnings of psychology as a science. But 
+he was not a psychologist---he was a craftsman by trade who was exposed to the 
+best minds of the Scottish Enlightenment. His experience included engineering, 
+commerce, and publishing (as well as dubious investment schemes and attempted 
+extortion). Nevertheless, the author makes connections between Playfair and 
+psychology. 
+
+Describe those connections.  
+
+**Response:**  
+Idea of experimental psychology. Dealing with the preattentive processing and the attention driven aspect of the viewers mind.
+
+
+<br>
+**Prompt:** In section 2.3, the author describes 5 examples of graphical 
+conventions that Playfair invented or adapted. Discuss your interpretation of 
+each convention in light of our other readings and discussions this term. 
+
+**Response:** 
+Framing, Titling, Color,labels,time, titling, Slope, Length, Area. It was interesting to see how his interest in art brought him to adding color to the graph. He used cartography as an inspiration to add grids to the graph.
+
+
+
+
 ##week 8 reading prompt
 
 Kostelnick, Charles (2007) The visual rhetoric of data displays: The conundrum
