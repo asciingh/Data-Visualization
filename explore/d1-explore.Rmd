@@ -1,0 +1,54 @@
+---
+title: "d7-explore"
+output: github_notebook
+---
+
+```{r}
+library("tidyverse")
+library("graphclassmate")
+(library("sjPlot"))
+```
+
+```{r}
+survey <- read.csv('../../../Desktop/School/Senior/Data Visualization/ME447-singhab/data-raw/survey.csv')
+```
+
+```{r}
+survey
+```
+```{r}
+names(survey)
+```
+```{r}
+survey <- survey%>%
+  select(branch_banking_freq,atm_banking_freq,internet_banking_freq,mobile_banking_freq,int_ban_accinfo,int_ban_transfer,int_ban_epay,int_ban_instal,int_ban_incometax,int_ban_confid)
+```
+```{r}
+
+```
+
+```{r}
+survey <- survey %>%
+        as_tibble() %>%
+        glimpse()
+```
+
+```{r}
+plot_likert(survey)
+```
+```{r}
+survey_atm <- survey%>%
+  select(atm_sastis_carddel,atm_sastis_transacnum,atm_sastis_notequal,atm_sastis_loc,atm_issue_cardblock,atm_issue_nocash,atm_issue_nonprinting,atm_issue_outoforder,atm_issue_wrongbalred,atm_issue_queue)
+```
+
+```{r}
+plot_likert(
+  survey_atm,
+  catcount=5,
+  grid.range = c(1.2, 1.4),
+  expand.grid = FALSE,
+  values = "sum.outside",
+  show.prc.sign = TRUE
+)
+```
+

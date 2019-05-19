@@ -27,4 +27,3 @@ saveRDS(skidf,"data/speed_ski.rds")
 # not this (RAL)
 # saveRDS(skidf,"speed_ski.rds")
 ```
-

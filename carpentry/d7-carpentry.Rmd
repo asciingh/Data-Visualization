@@ -1,0 +1,56 @@
+---
+title: "d7-likert-carpentry"
+output: github_notebook
+---
+```{r}
+library("tidyverse")
+library("graphclassmate")
+(library("sjPlot"))
+```
+
+```{r}
+survey <- read.csv('../../../Desktop/School/Senior/Data Visualization/ME447-singhab/data-raw/survey.csv')
+```
+
+
+```{r}
+survey_intBan <- survey%>%
+  select(int_ban_incometax,int_ban_accinfo,int_ban_transfer,int_ban_epay,int_ban_instal,int_ban_confid,int_ban_transferprot)
+```
+
+```{r}
+
+```
+
+
+
+
+```{r}
+survey_atm <- survey%>%
+  select(atm_sastis_transacnum,atm_sastis_loc,atm_sastis_carddel,atm_sastis_notequal,atm_issue_cardblock,atm_issue_nocash,atm_issue_nonprinting,atm_issue_outoforder,atm_issue_wrongbalred,atm_issue_queue)
+```
+
+
+```{r}
+
+```
+
+```{r}
+survey_atm %>% glimpse()
+```
+
+```{r}
+saveRDS(survey_intBan, "../data/int_bank_survey.rds")
+```
+
+```{r}
+saveRDS(survey_atm, "../data/atm_survey.rds")
+```
+
+```{r}
+
+``` 
+
+
+
+

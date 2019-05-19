@@ -1,0 +1,100 @@
+---
+title: "Likert-design"
+output: github_notebook
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+survey_atm <- readRDS("../data/atm_survey.rds") %>% 
+        glimpse()
+```
+```{r}
+labels <- c("Strongly Satisfied",
+            "Satisfied",
+            "Neutral",
+            "Dissatisfied",
+            "Strongly Dissatisfied")
+
+categories <- c("Card Delivery Satisfaction","Transaction Number Satisfaction","Note Quality Satisfaction","ATM location Satisfaction","Card Blocked Issue","Cash not ispensed issue", "Non-printing issue","Out of Order issue","Wrong balance reduction issue","Long queue issue")
+```
+
+```{r}
+plot_likert(
+  survey_atm,
+  catcount=4,
+  cat.neutral = 3,
+  grid.range = c(1,1.2),
+  expand.grid = FALSE,
+  values = "sum.outside",
+  show.prc.sign = FALSE,
+  title = "Customer Satisfaction Survey for ATM services",
+  axis.titles = c("Satisfaction across ATM Banking services", "Percentage(%)"),
+  axis.labels = categories,
+  legend.labels = labels,
+  legend.title = "Satisfaction scale",
+  legend.pos = "bottom",
+  reverse.colors = TRUE
+)
+```
+
+```{r}
+ggsave(filename = "d7-likert-onlinebanking",
+        path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/",
+        device  = "png",
+        width   = 8,
+        height  = 2.5,
+        units   = "in",
+        dpi     = 300)
+```
+
+
+
+
+
+
+
+#making graph for online banking
+```{r}
+survey_intBan <- readRDS("../data/int_bank_survey.rds") %>% 
+        glimpse()
+```
+
+```{r}
+cats <- c("Account Info ser","Account to Account Transfer","E-payment Service","Insallment Payment Service","Online Income Tax Service","Account Confidentiality", "Transfer Security")
+```
+
+
+
+```{r}
+plot_likert(
+  survey_intBan,
+  catcount=4,
+  cat.neutral = 3,
+  grid.range = c(1,1.1),
+  expand.grid = FALSE,
+  values = "sum.outside",
+  show.prc.sign = FALSE,
+  title = "Customer Satisfaction for Internet Banking Services",
+  axis.labels = cats,
+  axis.titles = c("Satisfaction across Internet Banking services", "Percentage(%)"),
+  legend.labels = labels,
+  legend.title = "Satisfaction scale",
+  legend.pos = "bottom",
+  reverse.colors = TRUE
+)
+```
+
+```{r}
+ggsave(filename = "d7-likert-atmbanking",
+        path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/",
+        device  = "png",
+        width   = 8,
+        height  = 2.5,
+        units   = "in",
+        dpi     = 300)
+```
+
+

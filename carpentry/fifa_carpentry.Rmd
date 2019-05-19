@@ -15,14 +15,33 @@ fifa_carpentry <- fifaData %>% select(ID,Name,Age,Potential,Overall,Nationality,
 fifa_carpentry %>% summary()
 ```
 
+
+
 ```{r}
 fifa_carpentry <- filter(fifa_carpentry, Potential > 80)
-fifa_carpentry <- filter(fifa_carpentry, Age < 25)
+fifa_carpentry <- filter(fifa_carpentry, Age < 23)
+
 dim(fifa_carpentry)
+```
+```{r}
+fifa_carpentry <- fifa_carpentry%>% mutate(Nationality= reorder(Nationality,Potential))
+```
+
+
+#only the ones that are more than 5
+```{r}
+fifa_carpentry <- fifa_carpentry %>% group_by(Nationality) %>% filter(n() > 5)
+```
+
+```{r}
+fifa_carpentry %>% group_by(Nationality) %>%  count(sort=TRUE)
 ```
 
 ```{r}
 fifa_carpentry <- na.omit(fifa_carpentry)
+dim(fifa_carpentry)
+```
+```{r}
 dim(fifa_carpentry)
 ```
 

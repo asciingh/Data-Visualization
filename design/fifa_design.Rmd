@@ -3,7 +3,13 @@ title: "fifa_design"
 author: "Anirudh Singh"
 date: "April 1, 2019"
 output: github_document
----
+--- 
+
+```{r}
+library("tidyverse")
+library("graphclassmate")
+```
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -14,23 +20,49 @@ knitr::opts_chunk$set(echo = TRUE)
 myData <- readRDS("../data/fifa_ready.rds") %>% 
         glimpse()
 ```
+```{r}
+
+```
+
+
 
 ```{r}
-p <- ggplot(youngPotential, aes(y = Potential, x = Nationality )) +
-        geom_boxplot()+
-        coord_flip() + 
-        theme_graphclass()+
-        labs(x= "Nationality",y="Potential (80+)", title = "Best future players by Country")+ 
-         theme_graphclass()
-p
+outlier_only <- myData %>%
+        group_by(Nationality) %>%
+        mutate(outlier = Potential < median(Potential) - 1.5 * IQR(Potential)) %>%
+        ungroup() %>% 
+        filter(outlier == TRUE)
+```
+
+```{r}
+outlier_only
 ```
 ```{r}
-ggsave(filename = "fifa-port1",
-        path    = "../figures",
+
+```
+
+```{r}
+p <- ggplot(myData, aes(y = Potential, x = Nationality )) +
+        geom_boxplot()+
+        geom_hline(aes(yintercept=82), linetype = "dashed",color="red") +
+        coord_flip() + 
+        theme_graphclass()+
+        labs(x= "Nationality",y="Potential (80+)", title = "Best Future Players by Country", caption = "Source: https://sofifa.com/")+
+         guides(fill = guide_legend(title = NULL, reverse = TRUE, keyheight = 2), color = "none") +
+        geom_jitter(data = outlier_only, width = 0.05, height = 0.2, alpha = 0.25, shape = 22) +
+        scale_x_discrete(labels=abbreviate)
+        
+p
+```
+
+
+```{r}
+ggsave(filename = "fifa-port1.png",
+        path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures",
         device  = "png",
-        width   = 8,
-        height  = 2.5,
+        width   = 6,
+        height  = 8,
         units   = "in",
-        dpi     = 300)
+        dpi     = 300) 
 ```
 
