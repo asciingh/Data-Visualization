@@ -33,7 +33,7 @@ This display meets requirements for D4.
 
 ```{r setup, echo=FALSE}
 library("knitr")
-include_graphics("../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/journalist-death.png")
+include_graphics("../figures/journalists.png")
 ```
 *Display 1: Journalist Killings by Year and Type*
 

@@ -21,7 +21,7 @@ fifa_my <- readRDS("../data/fifa-d6.rds") %>%
 
 
 ```{r}
-p<- ggparcoord(data = fifa_smaller, columns = 8:15, groupColumn  = "Position",
+p<- ggparcoord(data = fifa_my, columns = 8:15, groupColumn  = "Position",
            scale        = "globalminmax", 
            # scaleSummary = "median", # use with  scale == “center”
            # centerObsID  = 1,        # use with scale == “centerObs”
@@ -41,6 +41,14 @@ p
 
 
 
+```{r}
+ggsave(filename = "d6-multiFifa.png",
+        path    = "../figures/",
+        width   = 8,
+        height  = 6,
+        units   = "in",
+        dpi     = 400)
+```
 
 
 

@@ -43,8 +43,8 @@ p
 
 
 ```{r}
-ggsave(filename = "journalist-death.png",
-        path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures",
+ggsave(filename = "journalists.png",
+        path    = "../figures/",
         device  = "png",
         width   = 16,
         height  = 8,

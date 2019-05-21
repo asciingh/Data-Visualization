@@ -60,7 +60,7 @@ p <- ggplot(data = unemployment, aes(x = level_order, y = unemployment$Unemploye
 
 ```{r}
 ggsave(filename = "d5-unemployment.png",
-        path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/",
+        path    = "../figures/",
         width   = 8,
         height  = 6,
         units   = "in",

@@ -20,13 +20,12 @@ This display meets requirements for D4.
 
   - Observations :1168 after cleaning
   - Quantitative variable: Death Toll
-  - Qualitative variable: Reason for death (3
-levels)
+  - Qualitative variable: Reason for death (3 levels)
 
 ## Prose
 
-![](../../../Desktop/School/Senior/Data%20Visualization/ME447-singhab/figures/journalist-death.png)<!-- -->
-*Display 1: Journalist Killings by Year and Type*
+![](../figures/journalists.png)<!-- --> *Display 1: Journalist Killings
+by Year and Type*
 
 I made the use of a sample bar graph instead of a line graph as it was
 visually easier to see the impact. I also looked up the various wars

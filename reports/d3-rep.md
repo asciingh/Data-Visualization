@@ -20,12 +20,12 @@ popular.
 
 This display meets requirements for D3. (Domain specific) - Observations
 :5578 after cleaning - Quantitative variable: number of ratings total
-(aka downloads) - Qualitative variable: prime\_genre (19
-levels)
+(aka downloads) - Qualitative variable: prime\_genre (19 levels)
 
 ## Prose
 
-![](../../../Desktop/School/Senior/Data%20Visualization/ME447-singhab/figures/d3-scatter-alt-100.png)<!-- -->
+![](../figures/d3-scatter-alt-100.png)<!-- -->
+
 *Display 1: Scatter plot comparing number of downloads to languages
 supported for apps*
 

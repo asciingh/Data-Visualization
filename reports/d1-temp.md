@@ -9,25 +9,29 @@ opts_knit$set(root.dir = "../")
 opts_chunk$set(echo = FALSE)  
 ```
 
-\#\#Introduction Soccer is a sport that dominates the world. There are
-an estimated 4 billion fans who watch this sport. FIFA19 is a popular
-videogame that updates weekly based on the player performances. It is
-the closest one can get to numerically defining a player. In the
-following display, I aim to look towards the future of the sport by
-looking at promising young players and try to gauge which country will
-end up with the best players.
+## Introduction
 
-\#Requirements This display meets requirements for D1.
+Soccer is a sport that dominates the world. There are an estimated 4
+billion fans who watch this sport. FIFA19 is a popular videogame that
+updates weekly based on the player performances. It is the closest one
+can get to numerically defining a player. In the following display, I
+aim to look towards the future of the sport by looking at promising
+young players and try to gauge which country will end up with the best
+players.
+
+## Requirements
+
+This display meets requirements for D1.
 
   - Observations :628 after cleaning
   - Quantitative variable: Potential: indicator of how good the player
     can be (0-100)
-  - Qualitative variable: Nationality (27+
-levels)
+  - Qualitative variable: Nationality (27+ levels)
 
-\#Prose
+## Prose
 
-![](../../../Desktop/School/Senior/Data%20Visualization/ME447-singhab/figures/fifa-port1.png)<!-- -->
+<img src="../figures/fifa-port1.png" width="90%" height="100%" />
+
 *Display 1: Box plot of promising young players in FIFA19*
 
 As an avid soccer fan, I have watched and played it for as long as I can

@@ -33,8 +33,9 @@ This display meets requirements for D3.
 
 ```{r setup, echo=FALSE}
 library("knitr")
-include_graphics("../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/d3-scatter-alt-100.png")
+include_graphics("../figures/d3-scatter-alt-100.png") 
 ```
+
 *Display 1: Scatter plot comparing number of downloads to languages supported for apps*
 
 

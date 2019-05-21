@@ -51,7 +51,7 @@ I'm sure there is another representation by enforcing the right comparisons in t
 
 ```{r setup2, echo=FALSE}
 library("knitr")
-include_graphics("../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/d5-unemployment.png")
+include_graphics("../figures/d5-unemployment.png")
 ```
 *Display 2: Shows the corrected graph of the unemployment population from 2007 to 2010*
 

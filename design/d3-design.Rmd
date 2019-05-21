@@ -14,9 +14,9 @@ dim(myData)
 ```
 
 ```{r}
-p <- ggplot(data = appStore, aes(x = appStore$lang.num, y = appStore$rating_count_tot)) +
+p <- ggplot(data = myData, aes(x = myData$lang.num, y = myData$rating_count_tot)) +
     geom_jitter(alpha = 0.5, shape=20,colour = "#00CED1") +
-    facet_wrap(vars(appStore$prime_genre), as.table = FALSE)+
+    facet_wrap(vars(myData$prime_genre), as.table = FALSE)+
     theme_graphclass() +
     labs(x = "Number of languages supported", 
              y = "Number of Downloads",
@@ -31,7 +31,7 @@ p
 
 ```{r}
 ggsave(filename = "d3-scatter-alt-100.png",
-        path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/",
+        path    = "../figures/",
         width   = 11,
         height  = 11,
         units   = "in",

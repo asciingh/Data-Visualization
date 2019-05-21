@@ -53,7 +53,7 @@ was the aim.
 
 I created the following graph:
 
-<img src="../figures/multivariate-fifa-skewed.png" width="70%" />
+<img src="../figures/d6-multiFifa.png" width="70%" />
 
 *Display 1: Shows comparison between physical attributes between attack
 and defensive players*

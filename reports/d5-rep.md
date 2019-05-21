@@ -78,12 +78,10 @@ recession began and ended. Obama released the Recovery Act in Feb 2009
 to rescue the economy. This has also been highlighted in the graph. I
 used the red colour to show the recession beginning to alert the
 audience. Green was used for positive aspects of the graph such as
-recession ending and the recovery
-act.
+recession ending and the recovery act.
 
-![](../../../Desktop/School/Senior/Data%20Visualization/ME447-singhab/figures/d5-unemployment.png)<!-- -->
-*Display 2: Shows the corrected graph of the unemployment population
-from 2007 to 2010*
+![](../figures/d5-unemployment.png)<!-- --> *Display 2: Shows the
+corrected graph of the unemployment population from 2007 to 2010*
 
 Analyzing this graph we can make some observations: 
 
