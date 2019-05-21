@@ -30,7 +30,7 @@ This display meets requirements for D1.
 
 ## Prose
 
-<img src="../figures/fifa-port1.png" width="90%" height="100%" />
+![](../figures/d1-fifa.png)<!-- -->
 
 *Display 1: Box plot of promising young players in FIFA19*
 

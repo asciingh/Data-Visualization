@@ -31,9 +31,9 @@ This display meets requirements for D1.
 
 ## Prose
 
-```{r setup, echo=FALSE, out.height= "100%", out.width="90%"}
+```{r setup, echo=FALSE}
 library("knitr")
-include_graphics("../figures/fifa-port1.png")
+include_graphics("../figures/d1-fifa.png")
 ```
 
 *Display 1: Box plot of promising young players in FIFA19*

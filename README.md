@@ -12,12 +12,14 @@ BY-SA 2.0</a> <br> </small>
 
 Anirudh Singh
 
-\#Introduction This portfolio is done to meet the requirements for
-ME447:Data Visualization which is taught at Rose-Hulman Institute of
-Technology. The aim is to create clear, honest and effective
-presentation of data using R and Rstudio.
+# Introduction
 
-\#Displays and critiques
+This portfolio is done to meet the requirements for ME447:Data
+Visualization which is taught at Rose-Hulman Institute of Technology.
+The aim is to create clear, honest and effective presentation of data
+using R and Rstudio.
+
+# Displays and critiques
 
 [Display 1](reports/d1-temp.md) Fifa19 Young Player Analysis
 
@@ -46,13 +48,13 @@ to look for defining qualities of attackers and defenders.
 diverging stacked bar plot made to find pain areas in internet banking
 and ATM services
 
-\#Discussion Notes
+# Discussion Notes
 
 [Reading responses](reports/reading-responses.md) Notes from the data
 graphics literature on elements of design and visual rhetoric.
 
-[Presentation prompts](reports/presentation-prompts.md) Prompts that
+[Presentation prompts](reports/presentationResponses.md) Prompts that
 question the decisions made during the creation of each visualization.
 
-[Reflections on rhetoric](reports/rhetoric_reflections.md) Reflection on
+[Reflections on rhetoric](reporreflections-rhetoric.md.md) Reflection on
 the ideas of data journalists in discovering stories.
