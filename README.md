@@ -56,5 +56,5 @@ graphics literature on elements of design and visual rhetoric.
 [Presentation prompts](reports/presentationResponses.md) Prompts that
 question the decisions made during the creation of each visualization.
 
-[Reflections on rhetoric](reporreflections-rhetoric.md.md) Reflection on
+[Reflections on rhetoric](reports/reflections-rhetoric.md) Reflection on
 the ideas of data journalists in discovering stories.
