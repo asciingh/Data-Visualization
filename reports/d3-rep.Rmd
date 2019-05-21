@@ -1,0 +1,54 @@
+---
+title: "d3-report"
+output: 
+  github_document: 
+    pandoc_args: "--webtex"
+ 
+    
+bibliography: "../resources/references.bib"
+link-citations: yes
+csl: "../resources/journal-of-glaciology.csl"
+---
+
+
+
+```{r}
+library("knitr")  
+opts_knit$set(root.dir = "../")  
+opts_chunk$set(echo = FALSE)  
+```
+
+
+##Introduction
+As a part of Senior Design, we were working on an mobile application for a client. During the development phase we came across the decision to add more language support to the app. We ended up deciding that since English is widely spoken we can skip support for the rest. In this graph I will see if additional language support does make your app more popular.
+
+#Requirements
+This display meets requirements for D3.
+(Domain specific)
+- Observations :5578 after cleaning
+- Quantitative variable: number of ratings total (aka downloads)
+- Qualitative variable: prime_genre (19 levels)
+
+#Prose
+
+```{r setup, echo=FALSE}
+library("knitr")
+include_graphics("../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/d3-scatter-alt-100.png")
+```
+*Display 1: Scatter plot comparing number of downloads to languages supported for apps*
+
+
+In this graph it was important to see the distribution of the dataset. Since the appstore is more likely to have more failed apps, it was important to reduce the size of the datasets by removing apps with less than 10 downloads. I also chose to limit the languages to less than 60 since the ones higher than that we not adding any value. I also mutated and reordered the factors to make it look more orderly. I chose the colour to be cyan so that we can contrast it with the background. This makes it easier to see the pattern. [@Doumont2009]
+
+When analyzing the graph, one can see that for the most part, increasing language support increases the number of downloads. However after faceting it based on genre of app, the story changes. While looking at categories like Games, Social Networking, Utilities, Entertainment and Productivity, we see that increasing language support tends to boost downloads. This makes intuitive sense as these categories involve more reading and listening. Having said that, language support also has a sweet spot. We can see that after 20 languages or so, the ratings and downloads ends up decreasing. Hence additional language support after a certain point will give us little gain. 
+
+The opposite is true for genres like food, weather, finance,Navigation, Medical, Sports and Shopping. These categories gain very little popularity from language support. 
+
+For the project, our app was in the music sector. Looking at the music genre, we can see here that one can benefit from adding extra languages but once again there is a sweetspot around 16. Hence looking back, we would have benefitted from adding more languages.
+
+The following graph looks at apps that have lesser than 100000 downloads. I chose this as it was easier to see the trends in categories where data was sparse. When looking at lesser than 500000 and 1 M downloads, similar trends are seen for categories with larger volumes of data (Games,Social Networking etc)
+
+
+
+## References
+

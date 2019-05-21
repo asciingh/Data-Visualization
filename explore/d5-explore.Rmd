@@ -1,0 +1,37 @@
+---
+title: "R Notebook"
+output: github_notebook
+---
+
+
+```{r}
+library(tidyverse)
+library(graphclassmate)
+library("GGally")
+library("scagnostics")
+library("gghighlight")
+library(ggplot2)
+```
+```{r}
+unemployment <-read.csv("../data-raw/unemployment.csv")
+
+
+```
+```{r}
+unemployment 
+```
+
+```{r}
+p <- ggplot(data = unemployment, aes(x = YearMonth, y = unemployment$UnemployedPop)) +
+    geom_jitter(alpha = 0.9, shape=23, color = "red") +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+    
+    labs(x = "Year and Month", 
+             y = "Unemployment Rate (%)",
+             title = "Unemployment Rate from year 2007 - 10", 
+             
+             caption = "Source: BLS "
+    )
+   p     
+```
+

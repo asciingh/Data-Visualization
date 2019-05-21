@@ -12,6 +12,13 @@ link-citations: yes
 csl: "../resources/journal-of-glaciology.csl"
 ---
 
+```{r}
+library("knitr")  
+opts_knit$set(root.dir = "../")  
+opts_chunk$set(echo = FALSE)  
+```
+
+
 ##Introduction
 Soccer is a sport that dominates the world. There are an estimated 4 billion fans who watch this sport. FIFA19 is a popular videogame that updates weekly based on the player performances. It is the closest one can get to numerically defining a player. In the following display, I aim to look towards the future of the sport by looking at promising young players and try to gauge which country will end up with the best players.
 

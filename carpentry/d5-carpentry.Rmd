@@ -1,0 +1,34 @@
+---
+title: "d5-carpentry"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(graphclassmate)
+library("GGally")
+library("scagnostics")
+library("gghighlight")
+library(ggplot2)
+```
+
+
+
+```{r}
+unemployment <-read.csv("../data-raw/unemployment.csv")
+
+
+```
+
+
+```{r}
+unemployment$UnemployedPop <- as.numeric(as.character(unemployment$UnemployedPop))
+```
+
+
+
+
+
+```{r}
+saveRDS(unemployment, "../data/unemployment.rds")
+```

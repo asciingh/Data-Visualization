@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "d4-design"
 output: github_notebook
 ---
 
@@ -12,36 +12,13 @@ library(scales)
 library(lubridate)
 ```
 
-```{r}
-killed  <- read.csv("../data-raw/cpj.csv", na.strings=c("","NA"))
-```
+
 
 
 
 ```{r}
-killed$Date <- as.Date(killed$Date, format = "%B %d, %Y")
-killed$Month <- factor(month(killed$Date, label = TRUE))
-killed$Day <- factor(day(killed$Date))
-killed$Year <- factor(year(killed$Date))
-killed$WeekDay <- factor(wday(killed$Date, label = TRUE))
-```
-
-
-```{r}
-dim(killed)
-```
-
-
-```{r}
-killed <- killed %>%
-        as_tibble() %>%
+tempKilled <- readRDS("../data/journalists.rds") %>% 
         glimpse()
-```
-```{r}
-tempKilled<- killed[!killed$Year %in% c(3, 14,30, NA) & !is.na(killed$Type_death), ]
-```
-```{r}
-tempKilled <- filter(tempKilled, tempKilled$Type_death != "Unknown")
 ```
 
 

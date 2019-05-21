@@ -3,6 +3,12 @@ Display1-BoxPlot
 Anirudh Singh
 March 22, 2019
 
+``` r
+library("knitr")  
+opts_knit$set(root.dir = "../")  
+opts_chunk$set(echo = FALSE)  
+```
+
 \#\#Introduction Soccer is a sport that dominates the world. There are
 an estimated 4 billion fans who watch this sport. FIFA19 is a popular
 videogame that updates weekly based on the player performances. It is

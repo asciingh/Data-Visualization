@@ -8,6 +8,8 @@ library(tidyverse)
 library(graphclassmate)
 library("GGally")
 library("scagnostics")
+library("gghighlight")
+library(ggplot2)
 ```
 
 ```{r}
@@ -63,6 +65,9 @@ fifa_smaller <- subset(fifa_interest,Position !="MID")
 ```{r}
 fifa_smaller <- subset(fifa_smaller, Position != "NA")
 ```
+```{r}
+
+```
 
 ```{r}
 
@@ -70,8 +75,9 @@ ggparcoord(data = fifa_smaller, columns = 8:15, groupColumn  = "Position",
            scale        = "globalminmax", 
            # scaleSummary = "median", # use with  scale == “center”
            # centerObsID  = 1,        # use with scale == “centerObs”
+        
            missing      = "exclude", 
-           order        = "Skewed", # scagnostic measures 
+           order        = "Outlying", # scagnostic measures 
            alphaLines   = 0.4, 
            mapping      = NULL, 
            title        = "Comparison of Physical attributes based on Position") +
@@ -79,12 +85,12 @@ ggparcoord(data = fifa_smaller, columns = 8:15, groupColumn  = "Position",
 ```
 
 ```{r}
-#ggsave(filename = "multivariate-fifa.png",
- #       path    = "../figures/",
-  #      width   = 16,
-   #     height  = 8,
-    #    units   = "in",
-     #   dpi     = 300)
+#ggsave(filename = "multivariate-fifa-skewed.png",
+       # path    = "../figures/",
+       # width   = 16,
+       # height  = 8,
+       # units   = "in",
+       # dpi     = 300)
 ```
 
 

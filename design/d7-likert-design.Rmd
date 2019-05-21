@@ -41,11 +41,11 @@ plot_likert(
 ```
 
 ```{r}
-ggsave(filename = "d7-likert-onlinebanking",
+ggsave(filename = "d7-likert-onlinebanking.png",
         path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/",
         device  = "png",
         width   = 8,
-        height  = 2.5,
+        height  = 4,
         units   = "in",
         dpi     = 300)
 ```
@@ -63,7 +63,7 @@ survey_intBan <- readRDS("../data/int_bank_survey.rds") %>%
 ```
 
 ```{r}
-cats <- c("Account Info ser","Account to Account Transfer","E-payment Service","Insallment Payment Service","Online Income Tax Service","Account Confidentiality", "Transfer Security")
+cats <- c("Account Info service","Account to Account Transfer","E-payment Service","Insallment Payment Service","Online Income Tax Service","Account Confidentiality", "Transfer Security")
 ```
 
 
@@ -88,11 +88,11 @@ plot_likert(
 ```
 
 ```{r}
-ggsave(filename = "d7-likert-atmbanking",
+ggsave(filename = "d7-likert-atmbanking.png",
         path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/",
         device  = "png",
         width   = 8,
-        height  = 2.5,
+        height  = 4,
         units   = "in",
         dpi     = 300)
 ```

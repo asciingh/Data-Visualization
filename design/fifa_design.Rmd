@@ -47,7 +47,7 @@ p <- ggplot(myData, aes(y = Potential, x = Nationality )) +
         geom_hline(aes(yintercept=82), linetype = "dashed",color="red") +
         coord_flip() + 
         theme_graphclass()+
-        labs(x= "Nationality",y="Potential (80+)", title = "Best Future Players by Country", caption = "Source: https://sofifa.com/")+
+        labs(x= "Nationality",y="Potential (80+)", title = "Best Future Players by Country", caption = "Source: https://sofifa.com/", subtitle = "For players with potential over 80")+
          guides(fill = guide_legend(title = NULL, reverse = TRUE, keyheight = 2), color = "none") +
         geom_jitter(data = outlier_only, width = 0.05, height = 0.2, alpha = 0.25, shape = 22) +
         scale_x_discrete(labels=abbreviate)

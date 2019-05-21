@@ -1,5 +1,5 @@
 ---
-title: "Multiway Plot Explore"
+title: "Scatter Plot Explore"
 output: github_notebook
 ---
 ```{r}
@@ -29,6 +29,9 @@ appStore %>% select(user_rating) %>%
         unique() %>%
         arrange(user_rating)
 ```
+```{r}
+names(appStore)
+```
 
 ```{r}
 appStore %>% select(prime_genre) %>%
@@ -41,15 +44,40 @@ appStore %>% select(cont_rating) %>%
         arrange(cont_rating)
 ```
 ```{r}
-appStore %>% select(price) %>%
-        unique() %>%
-        arrange(price)
+ appStore <- filter(appStore, appStore$lang.num>0)
+
+appStore %>% count(rating_count_tot,lang.num)
+```
+```{r}
+appStore$lang.num%>% summary()
+```
+```{r}
+summary(appStore)
 ```
 
 ```{r}
-ggplot(appStore,aes(x=rating_count_tot, y = user_rating)) +
-        geom_point() +
-         scale_x_continuous(trans = 'log2')
+appStore <- filter(appStore, appStore$lang.num<60)
+appStore <- filter(appStore, appStore$lang.num>0)
+appStore <- filter(appStore, appStore$rating_count_tot<100000)
+appStore <- filter(appStore, appStore$rating_count_tot>10)
+```
+```{r}
+appStore <- appStore%>%mutate (prime_genre = fct_reorder(prime_genre,rating_count_tot))%>%
+    mutate (prime_genre = fct_reorder(prime_genre,lang.num))
+                            
+```
+
+
+
+```{r}
+ggplot(appStore,aes(x=lang.num, y = rating_count_tot)) +
+        geom_jitter(alpha=0.2) 
+        
+        
+```
+```{r}
+ggplot(appStore,aes(x=lang.num, y = rating_count_tot)) +
+        geom_jitter() 
         
 ```
 
@@ -60,6 +88,35 @@ ggplot(appStore,aes(x=price, y = user_rating)) +
 ```
 
 #User rating, price and genre
+
+
+```{r}
+ ggplot(data = appStore, aes(x = appStore$lang.num, y = appStore$rating_count_tot)) +
+    geom_jitter(alpha = 0.5, shape=20,colour = "#00CED1") +
+    facet_wrap(vars(appStore$prime_genre), as.table = FALSE)+
+    theme_graphclass() +
+    labs(x = "Price ($)", 
+             y = "Size (bytes)",
+             title = "", 
+             
+             caption = "Source: "
+    ) +
+    scale_color_manual(values = c(rcb("mid_BG"), rcb("mid_Br")))
+```
+
+
+
+```{r}
+ggsave(filename = "d3-scatter-alt-100.png",
+        path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/",
+        width   = 11,
+        height  = 11,
+        units   = "in",
+        dpi     = 400)
+```
+
+
+
 
 
 ```{r}

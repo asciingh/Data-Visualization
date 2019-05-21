@@ -32,20 +32,15 @@ State the number of observations: 7197
 
 List the variables: 
 
-- quantitative var 1 
-- quantitative var 2 
-- etc 
-- categorical var 1 and its levels 
-- categorical var 1 and its levels 
-- etc 
+- Potential
+- Nationality (categorical)
+-  
 
-State the graph type: 
+State the graph type: Boxplot
 
 Explain why the graph type is suited to the data structure:  
 
-- point 1 
-- point 2 
-- etc 
+- Easy to see quality of players with the box
 
 Explain each design choice and cite its supporting reference 
 
@@ -111,38 +106,31 @@ Comments from peers
 
 ## D3 correlations 
 
-State the number of observations:  
+This dataset is from the EA game FIFA 19. It is a yearly franchise which covers most players in the world. It is updated weekly hence it is safe to say it is the most accurate representation of the level of players. 
 
-List the variables: 
+Each player has a lot of characteristics but in general they can be divided into 3 main categories:
+Physical
+Technical
+Mental – Positioning, Composure, Vision (more useful for passing), Aggression, Interceptions( more defensive)
 
-- quantitative var 1 
-- quantitative var 2 
-- etc 
-- categorical var 1 and its levels 
-- categorical var 1 and its levels 
-- etc 
+Mental stats that apply to all are Positioning, Composure and Aggression
+Question: What matters more composure or aggression (Playing styles : Messi vs Ronaldo) – that is where the question came from.
 
-State the graph type: 
+We can see a linear relationship with composure. Higher composure usually leads to higher overall rating.
 
-Explain why the graph type is suited to the data structure:  
+With aggression, things are not so easily seen. 
+If we talk about defending, then people with high defensive work rate can benefit from having high aggression. (So defenders need to have high aggression)
 
-- point 1 
-- point 2 
-- etc 
 
-Explain each design choice and cite its supporting reference 
 
-- choice, reference 
-- choice, reference 
-- etc 
+Reorder the levels
+Label couple players 
+Do composure vs Aggression  - label players
+Making  rating as colour 
+Shape for position
 
-Comments from peers 
+Candidate for D6 Multivariate – changed to multivariate
 
-- Does the data structure satisfy the portfolio display requirements?  
-- From the Doumont paper, what type of story is being told? 
-- Is the graph type suited to the data structure? 
-- Other suggestion 
-- etc
 
 
 
@@ -151,11 +139,11 @@ Comments from peers
 
 **Context** 
 
-Type of injury or fatality: 
+Type of injury or fatality: Death toll
 
-People affected: 
+People affected: Journalists
 
-Over what span of time: 
+Over what span of time: 1992-2016
 
 
 
@@ -164,24 +152,20 @@ Over what span of time:
 - If you are redesigning someone else's graph, include an image of the original 
 - If not, graph the data yourself using a graph type suited to the data  
 
-State the number of observations:  
+State the number of observations:  1782
 
 List the variables: 
 
-- quantitative var 1 
-- quantitative var 2 
-- etc 
-- categorical var 1 and its levels 
-- categorical var 1 and its levels 
-- etc 
+- death toll 
+- time
+- type of death (cat)
 
-State the graph type: 
+State the graph type: bar graph
 
 Explain why the graph type is suited to the data structure: 
 
-- point 1 
-- point 2 
-- etc 
+- Since we are plotting number of deaths. A bar graph will be able to show clearly when comparing
+- bar graphs give us the capability of splitting the data based on subcategories.
 
 Explain the visual-rhetoric features of the graph that make it unethical:  
 
@@ -200,6 +184,21 @@ Explain each design choice in the redesign and cite its supporting reference
 - etc 
 
 Comments from peers 
+- Difference based on different wars
+- Line graph with lines for the different wars
+- Have a different panel for the total
+- find other investigative journalists who have studied this
+- watermark for the image
+- other editorial cartoons (edit the current one)
+- phillipines
+- death toll as a percentage of journalists in that area (try getting that)- get the denominator
+- looking at foreign journalists?
+- famous journalist sayings
+- unknown on top so blue starts from the same line
+- what goes into dangerous assignment
+- use coverage as category
+-use magik package for the image
+- graphdoctor.com
 
 - Any suggestions on improving the ethical display of injuries or fatalities? 
 - Does the data structure satisfy the portfolio display requirements?  
@@ -213,19 +212,17 @@ Comments from peers
 
 
 
-
-
 ## D5 redesign a graphical lie 
 
 **The original deceptive graph**
 
-The original image is included in the portfolio: Yes / No  
+The original image is included in the portfolio: Yes  
 
 Explain the visual-rhetoric features of the graph that make it deceptive:  
 
-- point 
-- point 
-- etc 
+- does not have y axis 
+- x axis not even 
+- mistitled 
 
 Comments from peers 
 
@@ -242,14 +239,8 @@ State the number of observations:
 
 Identify the variables:  
 
-Acceleration <int> 91, 89, 94, 57, 78, 94, 80, 86, 76, 43, 77, 64, 68, 70, 82, 87, 68, 88, 38, 46, 50, 75,...
-$ SprintSpeed  <int> 86, 91, 90, 58, 76, 88, 72, 75, 75, 60, 78, 62, 68, 64, 78, 83, 72, 85, 50, 52, 52, 76,...
-$ Agility      <int> 91, 87, 96, 60, 79, 95, 93, 82, 78, 67, 78, 70, 58, 92, 82, 91, 71, 90, 37, 61, 66, 77,...
-$ Balance      <int> 95, 70, 84, 43, 77, 94, 94, 83, 66, 49, 78, 71, 54, 90, 92, 85, 71, 80, 43, 45, 52, 59,...
-$ Reactions    <int> 95, 96, 94, 90, 91, 90, 90, 92, 85, 86, 90, 89, 85, 90, 93, 86, 91, 90, 85, 84, 87, 91,...
-$ Jumping      <int> 68, 95, 61, 67, 63, 56, 68, 69, 93, 76, 84, 30, 91, 64, 77, 75, 78, 90, 79, 68, 66, 88,...
-$ Stamina      <int> 72, 88, 81, 43, 90, 83, 89, 90, 84, 41, 78, 75, 66, 78, 96, 80, 89, 83, 35, 38, 86, 92,...
-$ Strength
+Unemployed pop
+Year Month
 
 Category - position
 State the graph type: 
@@ -290,12 +281,14 @@ State the number of observations:  9284
 
 List the variables: 
 
-- quantitative var 1 
-- quantitative var 2 
-- etc 
-- categorical var 1 and its levels 
-- categorical var 1 and its levels 
-- etc 
+Acceleration
+$ SprintSpeed   
+$ Agility     
+$ Balance      
+$ Reactions    
+$ Jumping       
+$ Stamina       
+$ Strength
 
 State the graph type: 
 
@@ -336,25 +329,18 @@ Comments from peers
 
 ## D7 self-taught  
 
-State the number of observations:  
+State the number of observations:  100
 
 List the variables: 
 
-- quantitative var 1 
-- quantitative var 2 
-- etc 
-- categorical var 1 and its levels 
-- categorical var 1 and its levels 
-- etc  
+-   ATM services variables (9)
+-Internet banking variables (7)
 
-State the graph type: 
+State the graph type: Likert bar plot
 
 Explain why the graph type is suited to the data structure:  
 
-- point 1 
-- point 2 
-- etc 
-
+- It has survey data
 Explain each design choice and cite its supporting reference 
 
 - choice, reference 

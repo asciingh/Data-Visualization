@@ -1,0 +1,68 @@
+---
+title: "R Notebook"
+output: github_notebook
+---
+
+
+```{r}
+library(tidyverse)
+library(graphclassmate)
+library("GGally")
+library("scagnostics")
+library("gghighlight")
+library(ggplot2)
+```
+
+```{r}
+dim(unemployment)
+```
+```{r}
+unemployment <- readRDS("../data/unemployment.rds")
+```
+```{r}
+unemployment
+```
+```{r}
+unemployment <- unemployment[order(unemployment$Year), ]
+```
+
+```{r}
+level_order <- factor(unemployment$YearMonth, level = c('2007Dec', '2008Jan', '2008Feb','2008Mar','2008Apr','2008May','2008Jun','2008Jul','2008Aug','2008Sep','2008Oct','2008Nov','2008Dec','2009Jan','2009Feb','2009Mar','2009Apr','2009May','2009Jun','2009Jul','2009Aug','2009Sep','2009Oct','2009Nov','2009Dec','2010Jan','2010Feb','2010Mar','2010Apr','2010May','2010Jun',""))
+```
+
+```{r}
+unemployment <- unemployment%>%mutate((YearMonth = fct_reorder(YearMonth,Year)))
+```
+
+
+
+
+```{r}
+p <- ggplot(data = unemployment, aes(x = level_order, y = unemployment$UnemployedPop)) +
+    geom_jitter(shape=19, width = 0.5, height = 0.5, na.rm = TRUE, color = "blue" ) +
+     geom_vline(xintercept=which(unemployment$YearMonth == '2007Dec'), linetype='dashed', colour='red')+
+    geom_vline(xintercept=which(unemployment$YearMonth == '2009Jun'), linetype='dashed', colour='red')+
+    geom_vline(xintercept=which(unemployment$YearMonth == '2009Feb'), linetype='dashed', colour='red')+
+    geom_text(aes(x=which(unemployment$YearMonth == '2009Jun'), label="Recession ends\n", y=6000), colour="green", angle=90, text=element_text(size=11))+
+    geom_text(aes(x=which(unemployment$YearMonth == '2008Jan'), label="Recession begins\n", y=15000), colour="red", angle=90, text=element_text(size=9))+
+    geom_text(aes(x=which(unemployment$YearMonth == '2009Feb'), label="Recovery Act\n", y=17000), colour="green", angle=90, text=element_text(size=9))+
+    theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+    
+    labs(x = "Year and Month", 
+             y = "Unemployment Population (Thousands)",
+             title = "Unemployment Population from year 2007 - 2010 (seasonally adjusted)", 
+             
+             caption = "Source: BLS "
+    )+ scale_y_continuous(limits = c(0,20000)) 
+    
+   p     
+```
+
+```{r}
+ggsave(filename = "d5-unemployment.png",
+        path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/",
+        width   = 8,
+        height  = 6,
+        units   = "in",
+        dpi     = 400)
+```

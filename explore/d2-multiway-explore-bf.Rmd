@@ -1,0 +1,80 @@
+---
+title: "multiway-black-friday"
+output: github_notebook
+---
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(graphclassmate)
+library(BalancedSampling)
+```
+
+```{r}
+blackfriday <- read.csv('../../../Desktop/School/Senior/Data Visualization/ME447-singhab/data-raw/BlackFriday.csv')
+```
+
+```{r}
+blackfriday <- blackfriday%>%
+  select(User_ID,Gender,Age,Occupation,City_Category,Purchase)
+```
+
+
+```{r}
+blackfriday <- na.omit(blackfriday)
+```
+```{r}
+set.seed(1)
+sample_black <- blackfriday %>%
+ 
+  sample_n(500,replace = FALSE)
+```
+
+
+```{r}
+sample_black %>% glimpse()
+```
+
+
+```{r}
+
+sample_black$Occupation <- as.factor(sample_black$Occupation)
+sample_black <- sample_black %>% 
+       
+        mutate (Occupation = fct_reorder(Occupation,Purchase)) %>%       
+        mutate(Age = fct_reorder(Age,Purchase)) %>%
+        mutate(City_Category = fct_reorder(City_Category,Purchase))
+        
+        
+  
+
+
+```
+
+
+
+
+```{r}
+ggplot(sample_black, aes(x = sample_black$Purchase, y = sample_black$Age , color = sample_black$City_Category)) +
+    geom_point() +
+
+        geom_jitter(width = 0.025, height = 0.005)+
+        facet_wrap(vars(sample_black$Occupation), as.table = FALSE) + 
+         theme_graphclass() +
+          scale_x_continuous(limits = c(0,25000), expand = c(0, 0), labels=c('0','5','10','15','20','25'))+
+  
+      
+ 
+        labs(y = "Occupation", x = "Amount Spent ($)", caption = "Source: Analytics Vidhya", color = "City Category")+
+        scale_fill_discrete(name = "New Legend Title")
+```
+
+```{r}
+ggsave(filename = "0402-multiway-black-flip.png",
+        path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/",
+        width   = 11,
+        height  = 11,
+        units   = "in",
+        dpi     = 400)
+```
+

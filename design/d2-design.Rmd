@@ -1,0 +1,40 @@
+---
+title: "d2-design"
+output: github_notebook
+---
+
+
+
+```{r}
+myData <- readRDS("../data/fifa_ready.rds") %>% 
+        glimpse()
+
+```
+
+
+
+
+```{r}
+p <- ggplot(sample_black, aes(x = sample_black$Purchase, y = sample_black$Age , color = sample_black$City_Category)) +
+    geom_point() +
+
+        geom_jitter(width = 0.025, height = 0.005)+
+        facet_wrap(vars(sample_black$Occupation), as.table = FALSE) + 
+         theme_graphclass() +
+          scale_x_continuous(limits = c(0,25000), expand = c(0, 0), labels=c('0','5','10','15','20','25'))+
+  
+      
+ 
+        labs(y = "Occupation", x = "Amount Spent ($1000)", caption = "Source: Analytics Vidhya", color = "City Category")
+   p  
+```
+
+```{r}
+ggsave(filename = "0402-multiway-black-flip.png",
+        path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/",
+        width   = 11,
+        height  = 11,
+        units   = "in",
+        dpi     = 400)
+```
+

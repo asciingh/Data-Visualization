@@ -1,0 +1,51 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(graphclassmate)
+library("GGally")
+library("scagnostics")
+library("gghighlight")
+library(ggplot2)
+```
+
+```{r}
+fifaData <- read.csv(file = "../data/fifa-19-data.csv")
+```
+```{r}
+fifaData$Overall%>% summary()
+```
+
+
+```{r}
+fifa_interest <- fifaData %>% select(ID,Name,Age,Potential,Overall,Nationality,Position,Acceleration,SprintSpeed, Agility, Balance, Reactions, Jumping, Stamina, Strength)
+```
+
+```{r}
+fifa_interest$Position <- ifelse(fifa_interest$Position=='ST', 'ATT', ifelse(fifa_interest$Position=='CF', 'ATT', fifa_interest$Position <- ifelse(fifa_interest$Position=='LF', 'ATT', ifelse(fifa_interest$Position=='RF', 'ATT', fifa_interest$Position <- ifelse(fifa_interest$Position=='LF', 'ATT', ifelse(fifa_interest$Position=='RF', 'ATT', fifa_interest$Position <- ifelse(fifa_interest$Position=='LS', 'ATT', ifelse(fifa_interest$Position=='RS', 'ATT', fifa_interest$Position <- ifelse(fifa_interest$Position=='LW', 'ATT', ifelse(fifa_interest$Position=='RW', 'ATT', fifa_interest$Position <- ifelse(fifa_interest$Position=='CAM', 'MID', ifelse(fifa_interest$Position=='CDM', 'MID', fifa_interest$Position <- ifelse(fifa_interest$Position=='LCM', 'MID', ifelse(fifa_interest$Position=='CM', 'MID', fifa_interest$Position <- ifelse(fifa_interest$Position=='LAM', 'MID', ifelse(fifa_interest$Position=='LDM', 'MID', fifa_interest$Position <- ifelse(fifa_interest$Position=='LM', 'MID', ifelse(fifa_interest$Position=='RAM', 'MID', fifa_interest$Position <- ifelse(fifa_interest$Position=='RCM', 'MID', ifelse(fifa_interest$Position=='RDM', 'MID', ifelse(fifa_interest$Position=='RM', 'MID', fifa_interest$Position <- ifelse(fifa_interest$Position=='CB', 'DEF', ifelse(fifa_interest$Position=='LB', 'DEF', fifa_interest$Position <- ifelse(fifa_interest$Position=='RB', 'DEF', ifelse(fifa_interest$Position=='RWB', 'DEF', fifa_interest$Position <- ifelse(fifa_interest$Position=='LCB', 'DEF', ifelse(fifa_interest$Position=='RCB', 'DEF', ifelse(fifa_interest$Position=='LWB', 'DEF', NA))))))))))))))))))))))))))))
+```
+
+
+```{r}
+
+fifa_smaller <- subset(fifa_interest,Position !="MID")
+
+```
+```{r}
+fifa_smaller <- subset(fifa_smaller, Position != "NA")
+fifa_smaller <- filter(fifa_smaller,Overall> 60)
+fifa_smaller <- filter(fifa_smaller,Age> 18)
+```
+```{r}
+dim(fifa_smaller)
+```
+
+
+
+```{r}
+saveRDS(fifa_smaller, "../data/fifa-d6.rds")
+```
+

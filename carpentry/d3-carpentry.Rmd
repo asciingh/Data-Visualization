@@ -1,0 +1,34 @@
+---
+title: "d3-carpentry"
+output: github_notebook
+---
+```{r}
+library("tidyverse")
+library("graphclassmate")
+```
+
+```{r}
+appStore <- read.csv(file="../data-raw/AppleStore.csv")
+```
+
+
+```{r}
+appStore <- filter(appStore, appStore$lang.num<60)
+appStore <- filter(appStore, appStore$lang.num>0)
+appStore <- filter(appStore, appStore$rating_count_tot<100000)
+appStore <- filter(appStore, appStore$rating_count_tot>10)
+```
+```{r}
+appStore <- appStore%>%mutate (prime_genre = fct_reorder(prime_genre,rating_count_tot))%>%
+    mutate (prime_genre = fct_reorder(prime_genre,lang.num))
+                            
+```
+
+```{r}
+dim(appStore)
+```
+
+```{r}
+saveRDS(appStore, "../data/appStore.rds")
+```
+
