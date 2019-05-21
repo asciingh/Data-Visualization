@@ -8,8 +8,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ```{r}
-survey_atm <- readRDS("../data/atm_survey.rds") %>% 
-        glimpse()
+library("tidyverse")
+library("graphclassmate")
+(library("sjPlot"))
+```
+
+```{r}
+survey_atm <- readRDS("../data/atm_survey.rds")
+        
 ```
 ```{r}
 labels <- c("Strongly Satisfied",
