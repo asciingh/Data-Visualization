@@ -7,19 +7,23 @@ opts_knit$set(root.dir = "../")
 opts_chunk$set(echo = FALSE)  
 ```
 
-\#\#Introduction As a part of Senior Design, we were working on an
-mobile application for a client. During the development phase we came
-across the decision to add more language support to the app. We ended up
-deciding that since English is widely spoken we can skip support for the
-rest. In this graph I will see if additional language support does make
-your app more popular.
+## Introduction
 
-\#Requirements This display meets requirements for D3. (Domain specific)
-- Observations :5578 after cleaning - Quantitative variable: number of
-ratings total (aka downloads) - Qualitative variable: prime\_genre (19
+As a part of Senior Design, we were working on an mobile application for
+a client. During the development phase we came across the decision to
+add more language support to the app. We ended up deciding that since
+English is widely spoken we can skip support for the rest. In this graph
+I will see if additional language support does make your app more
+popular.
+
+## Requirements
+
+This display meets requirements for D3. (Domain specific) - Observations
+:5578 after cleaning - Quantitative variable: number of ratings total
+(aka downloads) - Qualitative variable: prime\_genre (19
 levels)
 
-\#Prose
+## Prose
 
 ![](../../../Desktop/School/Senior/Data%20Visualization/ME447-singhab/figures/d3-scatter-alt-100.png)<!-- -->
 *Display 1: Scatter plot comparing number of downloads to languages

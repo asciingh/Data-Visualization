@@ -22,14 +22,14 @@ opts_chunk$set(echo = FALSE)
 ## Introduction
 Soccer is a sport that dominates the world. There are an estimated 4 billion fans who watch this sport. FIFA19 is a popular videogame that updates weekly based on the player performances. It is the closest one can get to numerically defining a player. In the following display, I aim to look towards the future of the sport by looking at promising young players and try to gauge which country will end up with the best players.
 
-# Requirements
+## Requirements
 This display meets requirements for D1.
 
 - Observations :628 after cleaning
 - Quantitative variable: Potential: indicator of how good the player can be (0-100)
 - Qualitative variable: Nationality (27+ levels)
 
-#Prose
+## Prose
 
 ```{r setup, echo=FALSE}
 library("knitr")

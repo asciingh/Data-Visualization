@@ -7,12 +7,13 @@ opts_knit$set(root.dir = "../")
 opts_chunk$set(echo = FALSE)  
 ```
 
-\#\#Introduction In today’s world, the media makes the use of
-vizualizations to send their message to the audience. Often they make
-the use of biased and incorrect graphs to mislead the audience. I want
-to explore one such graph and do it right. The following visualization
-looks at unemployment rate in the US from 2007-10 and how it was
-represented on television.
+## Introduction
+
+In today’s world, the media makes the use of vizualizations to send
+their message to the audience. Often they make the use of biased and
+incorrect graphs to mislead the audience. I want to explore one such
+graph and do it right. The following visualization looks at unemployment
+rate in the US from 2007-10 and how it was represented on television.
 
 The phase from 2007 - 2010 caused major turmoil in the world financial
 market due to the recession in the US during that phase. With the
@@ -23,8 +24,8 @@ to be biased and misleading.
 
 ![](../resources/unemployment.jpg)<!-- -->
 
-*Display 1: Shows the graph shown on Television by Fox News*
-\#\#Requirements This display meets requirements for D5.
+*Display 1: Shows the graph shown on Television by Fox News* \#\#
+Requirements This display meets requirements for D5.
 
   - Observations :31 after cleaning
   - Quantitative variable: unemployment Rate
@@ -32,7 +33,7 @@ to be biased and misleading.
 
 \-compelling story
 
-\#\#Prose
+## Prose
 
 The first problem with this graph is the X axis, the spacing between the
 4 labels is uneven numerically but the graph still shows it as
@@ -62,20 +63,22 @@ effect. It is safe to say that the viewer is manipulated and mislead. It
 is safe to say the guys at Fox news knew what they were doing.(Wainer,
 [2000](#ref-Wainer2000))
 
-In order to fix this, I took the actual data from the Bureau of Labor
-Statistics that gave me the unemployment rate based on month. Since we
-are looking at months and years on the X axis, I decided to represent
-the unemployment population monthly. This gives us a better
-understanding of the trend. I chose the data that had been seasonally
-adjusted. I also I made another dataframe that includes the variable
-MonthYear which is a blend of the Month and Year and the rate.I decided
-to rename the graph to what it is actually representing. I made sure to
-let the viewer know that it has been seasonally adjusted. I also added 2
-lines to indicate when the recession began and ended. Obama released the
-Recovery Act in Feb 2009 to rescue the economy. This has also been
-highlighted in the graph. I used the red colour to show the recession
-beginning to alert the audience. Green was used for positive aspects of
-the graph such as recession ending and the recovery
+I’m sure there is another representation by enforcing the right
+comparisons in the graph(Tufte, [1983](#ref-Tufte)). In order to fix
+this, I took the actual data from the Bureau of Labor Statistics that
+gave me the unemployment rate based on month. Since we are looking at
+months and years on the X axis, I decided to represent the unemployment
+population monthly. This gives us a better understanding of the trend. I
+chose the data that had been seasonally adjusted. I also I made another
+dataframe that includes the variable MonthYear which is a blend of the
+Month and Year and the rate.I decided to rename the graph to what it is
+actually representing. I made sure to let the viewer know that it has
+been seasonally adjusted. I also added 2 lines to indicate when the
+recession began and ended. Obama released the Recovery Act in Feb 2009
+to rescue the economy. This has also been highlighted in the graph. I
+used the red colour to show the recession beginning to alert the
+audience. Green was used for positive aspects of the graph such as
+recession ending and the recovery
 act.
 
 ![](../../../Desktop/School/Senior/Data%20Visualization/ME447-singhab/figures/d5-unemployment.png)<!-- -->
@@ -111,6 +114,14 @@ mislead.
 <https://www.thebalance.com/the-great-recession-of-2008-explanation-with-dates-4056832>
 
 <div id="refs" class="references">
+
+<div id="ref-Tufte">
+
+Tufte E (1983) The visual display of quantitative information. Graphics
+Press, Cheshire, CT, 16–31
+<https://www.edwardtufte.com/tufte/books_vdqi>
+
+</div>
 
 <div id="ref-Wainer2000">
 

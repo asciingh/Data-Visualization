@@ -3,7 +3,7 @@ d7-rep
 Anirudh Singh
 5/18/2019
 
-\#\#Introduction
+## Introduction
 
 Computer science is entering every field now. One such example would be
 it entering the banking world. Since the domination of the internet,
@@ -13,23 +13,26 @@ going to look visualize the feedback survey (done online) for the ATM
 and internet banking services offered. The aim is to find the pain areas
 in these banking services.
 
-\#\#Requirements This graph satisfies the D7 requirements: (domain
-specific) Likert Survey Bar plot observations: 100 ATM plot - y axis-
-satisfaction levels of various services and problems faced x axis -
-Percentage based on satisfaction level chosen
+## Requirements
+
+This graph satisfies the D7 requirements: (domain specific) Likert
+Survey Bar plot observations: 100 ATM plot - y axis- satisfaction levels
+of various services and problems faced x axis - Percentage based on
+satisfaction level chosen
 
 Internet banking plot y-axis :satisfaction levels of various services
 and problems faced x axis : Percentage based on satisfaction level
 chosen
 
-\#\#Prose For both the plots I chose shades of green to show
-satisfaction and shades of brown to show dissatisfaction. This use of
-colour scheme helps differentiate between positive and negative
-immediately without avoiding confusion. Chose the neutral color to be
-grey since that is not a true indicator of customer satisfaction. I
-chose to extract the neutral section since in the absence of it, it
-becomes very easy to see which service is struggling. (Charlotte,
-[2018](#ref-RostLC2018a))
+## Prose
+
+For both the plots I chose shades of green to show satisfaction and
+shades of brown to show dissatisfaction. This use of colour scheme helps
+differentiate between positive and negative immediately without avoiding
+confusion. Chose the neutral color to be grey since that is not a true
+indicator of customer satisfaction. I chose to extract the neutral
+section since in the absence of it, it becomes very easy to see which
+service is struggling. (Charlotte, [2018](#ref-RostLC2018a))
 
 ![](../figures/d7-likert-atmbanking.png)<!-- -->
 
@@ -47,7 +50,7 @@ might be worth looking into. Also 51% replied as neutral on the card
 block service. This does not seem like a pressing matter but might be
 worth looking into to increase customer satisfaction
 
-<img src="../figures/d7-likert-onlinebanking.png" width="70%" />
+![](../figures/d7-likert-onlinebanking.png)<!-- -->
 
 *Display 2: Shows the satisfaction level of customers using Internet
 banking services*

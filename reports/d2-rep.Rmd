@@ -31,7 +31,7 @@ This display meets requirements for D2.
 
 ```{r setup, echo=FALSE}
 library("knitr")
-include_graphics("../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/0402-multiway-black-flip.png")
+include_graphics("../figures/0402-multiway-black.png")
 ```
 *Display 1: Multiway Plot of Black Friday Customers based on Age and Occupation*
 

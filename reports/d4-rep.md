@@ -7,20 +7,23 @@ opts_knit$set(root.dir = "../")
 opts_chunk$set(echo = FALSE)  
 ```
 
-\#\#Introduction Journalists are constantly risking their lives to keep
-us informed. Some of them even lose their lives in order to get the
-truth. The following graph is an attempt to investigate the reasons for
-their death and also make people aware of their sacrifices over the
-years
+## Introduction
 
-\#Requirements This display meets requirements for D4.
+Journalists are constantly risking their lives to keep us informed. Some
+of them even lose their lives in order to get the truth. The following
+graph is an attempt to investigate the reasons for their death and also
+make people aware of their sacrifices over the years
+
+## Requirements
+
+This display meets requirements for D4.
 
   - Observations :1168 after cleaning
   - Quantitative variable: Death Toll
   - Qualitative variable: Reason for death (3
 levels)
 
-\#Prose
+## Prose
 
 ![](../../../Desktop/School/Senior/Data%20Visualization/ME447-singhab/figures/journalist-death.png)<!-- -->
 *Display 1: Journalist Killings by Year and Type*
