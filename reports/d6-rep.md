@@ -7,25 +7,31 @@ opts_knit$set(root.dir = "../")
 opts_chunk$set(echo = FALSE)  
 ```
 
-\#\#Introduction The inspiration for this graph comes from personal
-experience. I have played soccer since a very young age and I have been
-switched around in team positions based on my changing physical
-attributes. I used to play attack and as I grew older I moved into the
-defensive position. My coach at that time said that the reason for the
-switch was because other players were quicker for the position. I
-accepted the decision but that made me wonder what physical attributes
-do I need to have inorder for me to fit the Attack or Defence position.
+## Introduction
 
-\#\#Requirement This graph satisfies d6 requirements: \* Observations -
-7491 \* Quant variables - Attributes (Agility, Sprint Speed,
-Acceleration, Strength, Reaction, Jumping , Balance, Stamina)
+The inspiration for this graph comes from personal experience. I have
+played soccer since a very young age and I have been switched around in
+team positions based on my changing physical attributes. I used to play
+attack and as I grew older I moved into the defensive position. My coach
+at that time said that the reason for the switch was because other
+players were quicker for the position. I accepted the decision but that
+made me wonder what physical attributes do I need to have inorder for me
+to fit the Attack or Defence position.
 
-\*Quant variable (y) - Rating (20-100)
+## Requirement
 
-\#\#Prose In order to investigate this, I used the FIFA 19 player
-dataset. This game has been around for a long time and has been tracking
-players for almost 2 decades. It is the closest digital representation
-of player attributes.
+This graph satisfies d6 requirements: \* Observations - 7491 \* Quant
+variables - Attributes (Agility, Sprint Speed, Acceleration, Strength,
+Reaction, Jumping , Balance, Stamina)
+
+  - Quant variable (y) - Rating (20-100)
+
+## Prose
+
+In order to investigate this, I used the FIFA 19 player dataset. This
+game has been around for a long time and has been tracking players for
+almost 2 decades. It is the closest digital representation of player
+attributes.
 
 First, I looked at the mean of the overall. It seems that the mean ends
 up being around 65. I also looked at how the data is distributed in the
@@ -45,10 +51,9 @@ since they are the leeway between attack and defence. There were also a
 bunch of other attributes I could have looked at but physical attributes
 was the aim.
 
-I created the following
-graph:
+I created the following graph:
 
-![](../../../Desktop/School/Senior/Data%20Visualization/ME447-singhab/figures/fifa19-multivariate-skewed.png)<!-- -->
+<img src="../figures/multivariate-fifa-skewed.png" width="70%" />
 
 *Display 1: Shows comparison between physical attributes between attack
 and defensive players*
@@ -58,7 +63,7 @@ pretty distinct. It also maps with the viewers idea of attack (red) and
 defence (blue). (Charlotte, [2018](#ref-RostLC2018b)). I did not make
 the graph start at 0 since that would shrink it. The point of this is to
 see what attributes are dominated by what category so I feel it does not
-mislead.
+mislead. (Tufte, [1983](#ref-Tufte))
 
 We can make the following observations:
 
@@ -111,7 +116,7 @@ sense to hone Strength, Jumping and Stamina.
 
 Happy Playing\!
 
-\#\#References
+## References
 
 <div id="refs" class="references">
 
@@ -119,6 +124,14 @@ Happy Playing\!
 
 Charlotte L (2018) What to consider when choosing colors for data
 visualization. <https://blog.datawrapper.de/colors/>
+
+</div>
+
+<div id="ref-Tufte">
+
+Tufte E (1983) The visual display of quantitative information. Graphics
+Press, Cheshire, CT, 16–31
+<https://www.edwardtufte.com/tufte/books_vdqi>
 
 </div>
 

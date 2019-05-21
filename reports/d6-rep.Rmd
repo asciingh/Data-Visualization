@@ -19,19 +19,19 @@ opts_chunk$set(echo = FALSE)
 ```
 
 
-##Introduction
+## Introduction
 The inspiration for this graph comes from personal experience. I have played soccer since a very young age and I have been switched around in team positions based on my changing physical attributes. I used to play attack and as I grew older I moved into the defensive position. My coach at that time said that the reason for the switch was because other players were quicker for the position. I accepted the decision but that made me wonder what physical attributes do I need to have inorder for me to fit the Attack or Defence position.
 
 
-##Requirement
+## Requirement
 This graph satisfies d6 requirements:
 * Observations - 7491
 * Quant variables - Attributes (Agility, Sprint Speed, Acceleration, Strength, Reaction, Jumping , Balance, Stamina)
 
-*Quant variable (y) - Rating (20-100)
+* Quant variable (y) - Rating (20-100)
 
 
-##Prose
+## Prose
 In order to investigate this, I used the FIFA 19 player dataset. This game has been around for a long time and has been tracking players for almost 2 decades. It is the closest digital representation of player attributes.
 
 First, I looked at the mean of the overall. It seems that the mean ends up being around 65. I also looked at how the data is distributed in the dataset. I chose to take the all the players with an Overall greater that 60. This ensures that we are looking at more developed players and we also ensure we have about 75% of the dataset to avoid bias. Since we are looking at physical attributes, I chose to take players over 18 since by then the body should have mostly developed (speaking in terms of height etc). I chose to look at players in the Forward and Defensive positions only. Since these 2 positions are the exact opposite, it was worth looking into them. I did not take Midfielders because they have mixed rolls on the pitch. There are players like CAM(Center Attacking Mid) which has primarily attacking instructions and there are also players like CDM(Central Defensive Mid) that supports the defense. Even though they have certain roles, midfielders usually end up doing both since they are the leeway between attack and defence. There were also a bunch of other attributes I could have looked at but physical attributes was the aim.
@@ -39,7 +39,7 @@ First, I looked at the mean of the overall. It seems that the mean ends up being
 I created the following graph:
 
 
-```{r setup2, echo=FALSE}
+```{r setup2, echo=FALSE, out.width="70%"}
 library("knitr")
 include_graphics("../figures/multivariate-fifa-skewed.png")
 ```
@@ -47,7 +47,7 @@ include_graphics("../figures/multivariate-fifa-skewed.png")
 
 *Display 1: Shows comparison between physical attributes between attack and defensive players*
 
-I coloured the different positions with red and blue. I feel they are pretty distinct. It also maps with the viewers idea of attack (red) and defence (blue). [@RostLC2018b]. I did not make the graph start at 0 since that would shrink it. The point of this is to see what attributes are dominated by what category so I feel it does not mislead.
+I coloured the different positions with red and blue. I feel they are pretty distinct. It also maps with the viewers idea of attack (red) and defence (blue). [@RostLC2018b]. I did not make the graph start at 0 since that would shrink it. The point of this is to see what attributes are dominated by what category so I feel it does not mislead. [@Tufte]
 
 We can make the following observations:
 
@@ -69,4 +69,4 @@ In conclusion, if you are an aspiring attacker. I would suggest you focus on hon
 
 Happy Playing!
 
-##References
+## References

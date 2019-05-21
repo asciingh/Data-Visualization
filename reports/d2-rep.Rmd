@@ -14,11 +14,11 @@ csl: "../resources/journal-of-glaciology.csl"
 
 
 
-##Introduction
+## Introduction
 Black Friday is one of the most celebrated holidays in America. Lining up perfectly with Thanksgiving this holiday attracts people from all sorts of backgrounds. This display looks at people from different occupation backgrounds and ages and looks at their purchasing power
 
 
-#Requirements
+## Requirements
 This display meets requirements for D2.
 
 - Observations :500 after sampling
@@ -27,7 +27,7 @@ This display meets requirements for D2.
                         Age (7 categories)
                         City Category (A,B,C)
 
-#Prose
+## Prose
 
 ```{r setup, echo=FALSE}
 library("knitr")

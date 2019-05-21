@@ -13,19 +13,15 @@ csl: "../resources/journal-of-glaciology.csl"
 ---
 
 
-```{r}
-library("knitr")  
-opts_knit$set(root.dir = "../")  
-opts_chunk$set(echo = FALSE)  
-```
 
-##Introduction
+
+## Introduction
 
 Computer science is entering every field now. One such example would be it entering the banking world. Since the domination of the internet, everything is going digital including the services provided by the bank. It has become very common for companies to send out surveys online. I am going to look visualize the feedback survey (done online) for the ATM and internet banking services offered. The aim is to find the pain areas in these banking services.
 
 
 
-##Requirements
+## Requirements
 This graph satisfies the D7 requirements:
 (domain specific)
 Likert Survey Bar plot
@@ -39,13 +35,13 @@ x axis : Percentage based on satisfaction level chosen
 
 
 
-##Prose
+## Prose
 For both the plots I chose shades of green to show satisfaction and shades of brown to show dissatisfaction. This use of colour scheme helps differentiate between positive and negative immediately without avoiding confusion. Chose the neutral color to be grey since that is not a true indicator of customer satisfaction. I chose to extract the neutral section since in the absence of it, it becomes very easy to see which service is struggling. [@RostLC2018a]
 
 
 ```{r setup, echo=FALSE}
 library("knitr")
-include_graphics("../d7-likert-atmbanking.png")
+include_graphics("../figures/d7-likert-atmbanking.png")
 ```
 
 

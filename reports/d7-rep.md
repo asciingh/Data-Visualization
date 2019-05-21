@@ -3,12 +3,6 @@ d7-rep
 Anirudh Singh
 5/18/2019
 
-``` r
-library("knitr")  
-opts_knit$set(root.dir = "../")  
-opts_chunk$set(echo = FALSE)  
-```
-
 \#\#Introduction
 
 Computer science is entering every field now. One such example would be
@@ -37,7 +31,8 @@ chose to extract the neutral section since in the absence of it, it
 becomes very easy to see which service is struggling. (Charlotte,
 [2018](#ref-RostLC2018a))
 
-![](../../../Desktop/School/Senior/Data%20Visualization/ME447-singhab/figures/d7-likert-atmbanking.png)<!-- -->
+![](../figures/d7-likert-atmbanking.png)<!-- -->
+
 *Display 1: Shows the satisfaction level of customers using ATM
 services*
 
@@ -50,10 +45,10 @@ thing to fix would be the quality of notes dispensed by the machine ATM
 location satisfaction - 5% have complained about the location of ATMs,
 might be worth looking into. Also 51% replied as neutral on the card
 block service. This does not seem like a pressing matter but might be
-worth looking into to increase customer
-satisfaction
+worth looking into to increase customer satisfaction
 
-![](../../../Desktop/School/Senior/Data%20Visualization/ME447-singhab/figures/d7-likert-onlinebanking.png)<!-- -->
+<img src="../figures/d7-likert-onlinebanking.png" width="70%" />
+
 *Display 2: Shows the satisfaction level of customers using Internet
 banking services*
 

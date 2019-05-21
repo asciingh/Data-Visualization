@@ -19,10 +19,10 @@ opts_chunk$set(echo = FALSE)
 ```
 
 
-##Introduction
+## Introduction
 Soccer is a sport that dominates the world. There are an estimated 4 billion fans who watch this sport. FIFA19 is a popular videogame that updates weekly based on the player performances. It is the closest one can get to numerically defining a player. In the following display, I aim to look towards the future of the sport by looking at promising young players and try to gauge which country will end up with the best players.
 
-#Requirements
+# Requirements
 This display meets requirements for D1.
 
 - Observations :628 after cleaning
@@ -35,6 +35,7 @@ This display meets requirements for D1.
 library("knitr")
 include_graphics("../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/fifa-port1.png")
 ```
+
 *Display 1: Box plot of promising young players in FIFA19*
 
 
