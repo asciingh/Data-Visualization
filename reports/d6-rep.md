@@ -54,7 +54,7 @@ was the aim.
 I created the following graph:
 
 *Display 1: Shows comparison between physical attributes between attack
-and defensive players*
+and defensive players* ![](../figures/d6-fifa-skewed.png)<!-- -->
 
 **For some reason the graph does not show as i could not ggsave, I have
 attached graph in the email and you can see it in the figures under the
