@@ -41,7 +41,7 @@ I created the following graph:
 
 ```{r setup2, echo=FALSE}
 library("knitr")
-include_graphics("../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/fifa19-multivariate-skewed.png")
+include_graphics("../figures/multivariate-fifa-skewed.png")
 ```
 
 

@@ -45,8 +45,10 @@ For both the plots I chose shades of green to show satisfaction and shades of br
 
 ```{r setup, echo=FALSE}
 library("knitr")
-include_graphics("../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/d7-likert-atmbanking.png")
+include_graphics("../d7-likert-atmbanking.png")
 ```
+
+
 *Display 1: Shows the satisfaction level of customers using ATM services*
 
 Looking at the graph of the ATM services, we can see the services that need to be fixed. If I were a bank, I would start by fixing:
@@ -59,8 +61,10 @@ Also 51% replied as neutral on the card block service. This does not seem like a
 
 ```{r setup2, echo=FALSE}
 library("knitr")
-include_graphics("../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/d7-likert-onlinebanking.png")
+include_graphics("../figures/d7-likert-onlinebanking.png")
 ```
+
+
 *Display 2: Shows the satisfaction level of customers using Internet banking services*
 
 

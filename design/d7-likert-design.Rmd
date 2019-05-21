@@ -48,7 +48,7 @@ plot_likert(
 
 ```{r}
 ggsave(filename = "d7-likert-onlinebanking.png",
-        path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/",
+        path    = "../figures/",
         device  = "png",
         width   = 8,
         height  = 4,
@@ -95,7 +95,7 @@ plot_likert(
 
 ```{r}
 ggsave(filename = "d7-likert-atmbanking.png",
-        path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/",
+        path    = "../figures/",
         device  = "png",
         width   = 8,
         height  = 4,
