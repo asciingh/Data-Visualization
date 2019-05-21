@@ -1,0 +1,51 @@
+---
+title: "R Notebook"
+output: github_notebook
+---
+```{r}
+library(tidyverse)
+library(dplyr)
+library(graphclassmate)
+library(BalancedSampling)
+```
+
+```{r}
+blackfriday <- read.csv('../../../Desktop/School/Senior/Data Visualization/ME447-singhab/data-raw/BlackFriday.csv')
+```
+
+```{r}
+blackfriday <- blackfriday%>%
+  select(User_ID,Gender,Age,Occupation,City_Category,Purchase)
+```
+
+
+```{r}
+blackfriday <- na.omit(blackfriday)
+```
+```{r}
+set.seed(1)
+sample_black <- blackfriday %>%
+ 
+  sample_n(500,replace = FALSE)
+```
+
+
+```{r}
+
+sample_black$Occupation <- as.factor(sample_black$Occupation)
+sample_black <- sample_black %>% 
+       
+        mutate (Occupation = fct_reorder(Occupation,Purchase)) %>%       
+        mutate(Age = fct_reorder(Age,Purchase)) %>%
+        mutate(City_Category = fct_reorder(City_Category,Purchase))
+        
+        
+  
+
+
+```
+
+```{r}
+saveRDS(sample_black, "../data/blackfridaysample.rds")
+```
+

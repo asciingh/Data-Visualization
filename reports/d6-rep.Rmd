@@ -39,13 +39,15 @@ First, I looked at the mean of the overall. It seems that the mean ends up being
 I created the following graph:
 
 
-```{r setup2, echo=FALSE, out.width="70%"}
-library("knitr")
-include_graphics("../figures/d6-multiFifa.png")
-```
+
 
 
 *Display 1: Shows comparison between physical attributes between attack and defensive players*
+
+
+
+
+**For some reason the graph does not show as i could not ggsave, I have attached graph in the email and you can see it in the figures under the named d6-fifa-skewed.png** 
 
 I coloured the different positions with red and blue. I feel they are pretty distinct. It also maps with the viewers idea of attack (red) and defence (blue). [@RostLC2018b]. I did not make the graph start at 0 since that would shrink it. The point of this is to see what attributes are dominated by what category so I feel it does not mislead. [@Tufte]
 

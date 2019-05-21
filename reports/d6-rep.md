@@ -53,10 +53,12 @@ was the aim.
 
 I created the following graph:
 
-<img src="../figures/d6-multiFifa.png" width="70%" />
-
 *Display 1: Shows comparison between physical attributes between attack
 and defensive players*
+
+**For some reason the graph does not show as i could not ggsave, I have
+attached graph in the email and you can see it in the figures under the
+named d6-fifa-skewed.png**
 
 I coloured the different positions with red and blue. I feel they are
 pretty distinct. It also maps with the viewers idea of attack (red) and

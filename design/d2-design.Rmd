@@ -6,7 +6,7 @@ output: github_notebook
 
 
 ```{r}
-myData <- readRDS("../data/fifa_ready.rds") %>% 
+myData <- readRDS("../data/blackfridaysample.rds") %>% 
         glimpse()
 
 ```
@@ -30,8 +30,8 @@ p <- ggplot(sample_black, aes(x = sample_black$Purchase, y = sample_black$Age , 
 ```
 
 ```{r}
-ggsave(filename = "0402-multiway-black-flip.png",
-        path    = "../../../Desktop/School/Senior/Data Visualization/ME447-singhab/figures/",
+ggsave(filename = "d2-blackfriday.png",
+        path    = "../figures/",
         width   = 11,
         height  = 11,
         units   = "in",

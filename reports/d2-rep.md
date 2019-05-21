@@ -17,8 +17,8 @@ This display meets requirements for D2.
 
 ## Prose
 
-![](../figures/0402-multiway-black.png)<!-- --> *Display 1: Multiway
-Plot of Black Friday Customers based on Age and Occupation*
+![](../figures/d2-blackfriday.png)<!-- --> *Display 1: Multiway Plot of
+Black Friday Customers based on Age and Occupation*
 
 The data for this graph was really large hence I had to sample it. I
 chose sampling without replacement to get discrete data. I also
